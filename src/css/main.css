@@ -105,7 +105,7 @@ hr {
 }
 
 mark {
-  @apply bg-neutral-800 text-brand-main;
+  @apply bg-neutral-800 text-brand-main rounded-sm px-05 -mx-05;
 }
 
 code {

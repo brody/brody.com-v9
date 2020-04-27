@@ -9,7 +9,8 @@
 
           <h3><a :href="items.link"> {{ items.title }} </a></h3>
           <img :src="items.thumbnail">
-          <p>{{ relativeDate(items.pubDate, "YYYY-MM-DD HH:mm:ss") }}</p>
+          <span class="letterboxd__content" v-html="items.content"></span>
+          <!-- <p>{{ relativeDate(items.pubDate, "YYYY-MM-DD HH:mm:ss") }}</p> -->
 
         </div>
 
@@ -93,5 +94,9 @@ export default {
 
 .letterboxd > div > :nth-child(3) {
   @apply col-span-1 row-span-1 col-start-2 row-start-2 self-start text-sm opacity-75 pt-1;
+}
+
+.letterboxd__content p:first-child {
+  display: none;
 }
 </style>
