@@ -96,7 +96,6 @@ query Entries {
         title
         path
         description
-        category
         date (format: "DD MMM YYYY")
         tags {
           id
