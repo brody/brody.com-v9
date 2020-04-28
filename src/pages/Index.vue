@@ -9,15 +9,15 @@
         <Peek text="Brody MacLean" imageURL="intro/intro-brody.jpg" class="text-brand-main bg-neutral-800" imageClass="max-w-xs sm:max-w-sm" />.
       </h2>
       <p>
-        I’m a multi-disciplinary product designer living in
-        <Peek text="Sydney, Australia" imageURL="intro/intro-sydney.jpg" class="text-brand-main bg-neutral-800" imageClass="max-w-xs sm:max-w-sm" />. Currently, I’m Lead Product Designer, building software for the insurance industry, at
+        I’m a multi-disciplinary product designer based in
+        <Peek text="Sydney, Australia" imageURL="intro/intro-sydney.jpg" class="text-brand-main bg-neutral-800" imageClass="max-w-xs sm:max-w-sm" />. Currently, I’m Lead Product Designer, building software for the insurance industry at
         <Peek text="Intelligent Thought" imageURL="intro/intro-intelligentthought.jpg" class="text-brand-main bg-neutral-800" imageClass="max-w-xs sm:max-w-sm" />. Previously I've made things at places like Deputy, Hudl and CloudBees.
       </p>
       <p class="mt-4">
-        <a href="/about">
+        <g-link to="/about/">
           More about me
           <span class="opacity-50">→</span>
-        </a>
+        </g-link>
       </p>
     </section>
 
@@ -25,48 +25,34 @@
       <h2 class="mb-3">Journal</h2>
       <p class="text-neutral-600 mt-2 mb-4">I sometimes jot down my thoughts on things ranging from design, technology and life in general.</p>
 
-      <div class="my-2 py-2">
-        <a href="/post.html">How to work remotely for office workers</a>
-        <div>Inceptos per class lectus malesuada est enim feugiat mollis nunc pulvinar.</div>
-        <div class="text-neutral-700 text-sm mt-1">1 Nov 2019 • Personal</div>
-      </div>
-
-      <div class="my-2 py-2">
-        <a href="/post.html">Münchhausen Trilemma</a>
-        <div>Nisl sodales nostra ad laoreet sociis velit penatibus nascetur, natoque phasellus dapibus maecenas.</div>
-        <div class="text-neutral-700 text-sm mt-1">1 Nov 2019 • Personal</div>
-
-      </div>
-
-      <div class="my-2 py-2">
-        <a href="/post.html">GM’s CEO offers to make ventilators in WWII-style mobilization</a>
-        <div>
-          Congue sagittis risus inceptos netus nunc accumsan ad class
-          laoreet, habitant facilisis luctus turpis rhoncus ligula ultricies
-          sapien, vitae venenatis fusce pellentesque massa porttitor vivamus
-          iaculis.
-        </div>
-        <div class="text-neutral-700 text-sm mt-1">1 Nov 2019 • Personal</div>
-
+      <div v-for="entry in $page.entries.edges" :key="entry.id" class="my-2 py-2">
+        <g-link :to="entry.node.path">{{ entry.node.title }}</g-link>
+        <div>{{ entry.node.description }}</div>
+        <span class="text-neutral-700 text-sm mt-1">{{ entry.node.date }}</span>
+        <span class="entry-tags text-sm text-neutral-700" v-for="tag in entry.node.tags" :key="tag.id"> •
+          <g-link class="entry-tags__link text-sm text-neutral-700" :to="tag.path">
+            {{ tag.title }}
+          </g-link>
+        </span>
       </div>
 
       <p class="mt-4">
-        <a href="#">
+        <g-link to="/journal/">
           See more entries
           <span class="opacity-50">→</span>
-        </a>
+        </g-link>
       </p>
     </section>
 
     <section class="mb-16 md:mb-24 lg:mb-32" id="featured-work">
       <h2 class="mb-3">Featured work</h2>
-      <p class="text-neutral-600 mt-2 mb-4">I sometimes jot down my thoughts on things ranging from design, technology and life in general.</p>
+      <p class="text-neutral-600 mt-2 mb-4">A selection of some projects I've been working on.</p>
 
       <div class="my-2 py-2">
         <a href="/post.html">
-          <Peek text="JobAdder Design System" imageURL="work/ja-ds.png" imageClass="hidden md:block max-w-lg" />
+          <Peek text="Venom Design System" imageURL="work/ja-ds.png" imageClass="hidden md:block max-w-lg" />
         </a>
-        <div>Inceptos per class lectus malesuada est enim feugiat mollis nunc pulvinar.</div>
+        <div>Redesigned UI & UX, while creating JobAdder's design system, Venom.</div>
         <div class="text-neutral-700 text-sm">2019 • Head of Design</div>
       </div>
 
@@ -74,7 +60,7 @@
         <a href="/post.html">
           <Peek text="JobAdder Navigation" imageURL="work/ja-nav.png" imageClass="hidden md:block max-w-lg" />
         </a>
-        <div>Nisl sodales nostra ad laoreet sociis velit penatibus nascetur, natoque phasellus dapibus maecenas.</div>
+        <div>A major overhaul of the cluttered navigation that took up a third of the users screen.</div>
         <div class="text-neutral-700 text-sm">2018 • Lead Product Designer</div>
       </div>
 
@@ -101,13 +87,35 @@
   </Layout>
 </template>
 
+<page-query>
+query Entries {
+  entries: allEntry (limit: 3) {
+    edges {
+      node {
+        id
+        title
+        path
+        description
+        category
+        date (format: "DD MMM YYYY")
+        tags {
+          id
+          title
+          path
+       }
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
 import Peek from "~/components/Peek.vue";
 import Memoji from "~/components/Memoji.vue";
 
 export default {
   metaInfo: {
-    title: "Brody MacLean"
+    title: "👋"
   },
   components: {
     Peek,

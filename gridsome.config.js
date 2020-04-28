@@ -14,7 +14,39 @@ if (process.env.NODE_ENV === "production")
 
 module.exports = {
   siteName: "Brody MacLean",
-  plugins: [],
+  siteDescription:
+    "Brody MacLean is a Lead Product Designer based in Sydney, Australia.",
+
+  templates: {
+    Entry: "/:title",
+    Tag: "/tag/:id",
+  },
+
+  plugins: [
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        typeName: "Entry",
+        path: "content/journal/**/*.md",
+        refs: {
+          tags: {
+            typeName: "Tag",
+            create: true,
+          },
+        },
+      },
+    },
+  ],
+
+  transformers: {
+    remark: {
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"],
+      anchorClassName: "icon icon-link",
+      plugins: [["@gridsome/remark-prismjs"]],
+    },
+  },
+
   css: {
     loaderOptions: {
       postcss: {

@@ -3,13 +3,17 @@
 
 // Import global styles
 require("~/css/main.css");
-// import '~/css/font.scss'
+import "~/css/prism.css";
 
 import DefaultLayout from "~/layouts/Default.vue";
+import JournalLayout from "~/layouts/Journal.vue";
+import PageLayout from "~/layouts/Page.vue";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
+  Vue.component("JournalLayout", JournalLayout);
+  Vue.component("PageLayout", PageLayout);
 
   // Add javascript & jquery
   head.script.push({ src: "/assets/js/theme.js" });
@@ -24,6 +28,6 @@ export default function(Vue, { router, head, isClient }) {
   // Add attributes to BODY tag
   head.bodyAttrs = {
     class:
-      "bg-neutral-900 font-sans text-neutral-500 antialiased max-w-screen-xl mx-auto px-4 sm:px-8 md:px-12 reative my-40 md:mt-48 lg:mt-56",
+      "bg-neutral-900 font-sans text-neutral-500 antialiased max-w-screen-lg mx-auto px-4 sm:px-8 md:px-12 reative my-40 md:mt-48 lg:mt-56",
   };
 }

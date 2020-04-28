@@ -24,6 +24,13 @@ h4 {
   @apply text-base leading-normal font-semibold text-neutral-300 mt-6 mb-2;
 }
 
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child {
+  @apply mt-1;
+}
+
 p {
   @apply mt-5;
 }
@@ -44,10 +51,10 @@ ol li {
 }
 
 ol > li::before {
-  content: "0" counter(olcount) ".";
+  content: counter(olcount) ".";
   font-size: 1em;
-  left: -1.75rem;
-  @apply py-2 absolute top-0 opacity-50 inline-block;
+  left: -2.35rem;
+  @apply py-1 absolute top-0 right-0 opacity-50 inline-block w-8 text-right;
 }
 
 ul,
@@ -56,7 +63,7 @@ ol {
 }
 
 li {
-  @apply py-2;
+  @apply py-1;
 }
 
 li p {
@@ -76,10 +83,10 @@ ol li ul {
 }
 
 ul > li::before {
-  content: "—";
+  content: "•";
   font-size: 1em;
-  left: -1.75rem;
-  @apply py-2 absolute top-0 opacity-50 inline-block;
+  left: -2.35rem;
+  @apply py-1 absolute top-0 opacity-50 inline-block w-8 text-right;
 }
 
 ol ol,
@@ -90,7 +97,7 @@ ul ul {
 }
 
 blockquote {
-  @apply my-6 border-l-4 border-neutral-800 pl-5 italic py-1;
+  @apply my-6 border-l-4 border-neutral-800 pl-5 py-1;
 }
 blockquote p {
   @apply py-1 px-0 m-0;
@@ -98,6 +105,10 @@ blockquote p {
 
 blockquote blockquote {
   @apply my-3;
+}
+
+blockquote cite {
+  @apply italic opacity-75;
 }
 
 hr {
@@ -109,7 +120,11 @@ mark {
 }
 
 code {
-  @apply text-neutral-200 font-mono bg-neutral-800 rounded text-sm px-2 py-1;
+  @apply text-neutral-200 font-mono bg-neutral-800 rounded text-sm;
+}
+
+p > code {
+  @apply px-1 py-05;
 }
 
 code[class*="language-"],
@@ -128,7 +143,7 @@ img {
 figure,
 iframe,
 .twitter-tweet {
-  @apply my-8;
+  @apply my-8 max-w-full;
 }
 
 figcaption {
