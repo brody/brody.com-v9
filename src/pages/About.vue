@@ -91,8 +91,50 @@ import Letterboxd from "~/components/Letterboxd.vue";
 
 export default {
   metaInfo: {
-    title: "About"
+    title: "About",
+    meta: [
+      { name: "author", content: "Brody MacLean" },
+      {
+        name: "description",
+        content:
+          "A multi-disciplinary product designer based in Sydney, Australia."
+      },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:description",
+        content:
+          "A multi-disciplinary product designer based in Sydney, Australia."
+      },
+      { name: "twitter:title", content: "About Brody MacLean" },
+      { name: "twitter:site", content: "@brodymaclean" },
+      {
+        name: "twitter:image",
+        content: `${process.env.GRIDSOME_BASE_URL}/img/og.png`
+      },
+      { name: "twitter:creator", content: "@brodymaclean" },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: "About Brody MacLean" },
+      {
+        property: "og:description",
+        content:
+          "A multi-disciplinary product designer based in Sydney, Australia."
+      },
+      {
+        property: "og:url",
+        content: `${process.env.GRIDSOME_BASE_URL}`
+      },
+
+      {
+        property: "og:image",
+        content: `${process.env.GRIDSOME_BASE_URL}/img/og.png`
+      },
+      {
+        property: "og:image:secure_url",
+        content: `${process.env.GRIDSOME_BASE_URL}/img/og.png`
+      }
+    ]
   },
+
   components: {
     Goodreads,
     LastFM,
@@ -100,6 +142,5 @@ export default {
   }
 };
 </script>
-
 
 

@@ -11,6 +11,7 @@ query Entry ($path: String!) {
     content
     date (format: "DD MMM YYYY")
     cover_image (width: 640, height: 380)
+    description
     tags {
       id
       title
@@ -21,9 +22,11 @@ query Entry ($path: String!) {
 </page-query>
 
 <script>
-export default {
-  metaInfo() {
-    title: this.$page.entry.title;
-  }
-};
+// export default {
+//   metaInfo() {
+//     return {
+//       title: this.$page.entry.title
+//     };
+//   }
+// };
 </script>

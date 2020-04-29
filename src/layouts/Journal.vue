@@ -47,6 +47,7 @@
 
 <script>
 import Footer from "~/components/Footer.vue";
+import moment from "moment";
 
 export default {
   components: {
@@ -56,12 +57,44 @@ export default {
     return {
       title: this.$page.entry.title,
       meta: [
+        { name: "description", content: this.$page.entry.description },
+        // twitter-card: https://cards-dev.twitter.com/validator
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:description", content: this.$page.entry.description },
+        { name: "twitter:title", content: this.$page.entry.title },
+        { name: "twitter:site", content: "@brodymaclean" },
+        { name: "twitter:image", content: this.getCoverImage },
+        { name: "twitter:creator", content: "@brodymaclean" },
+        { property: "og:type", content: "article" },
+        { property: "og:title", content: this.$page.entry.title },
+        { property: "og:description", content: this.$page.entry.description },
         {
-          name: "description",
-          content: this.$page.entry.description
-        }
-      ]
+          property: "og:url",
+          content: `${this.getBaseUrl}${this.$page.entry.path}`
+        },
+        {
+          property: "article:published_time",
+          content: moment(this.$page.entry.date).format("MM-DD-YYYY")
+        },
+        { property: "og:updated_time", content: this.$page.entry.date },
+        { property: "og:image", content: this.getCoverImage },
+        { property: "og:image:secure_url", content: this.getCoverImage }
+      ],
+      script: [{ src: "https://platform.twitter.com/widgets.js", async: true }]
     };
+  },
+  computed: {
+    getCoverImage() {
+      let coverImage = "";
+      const cover_image = this.$page.entry.cover_image;
+      if (cover_image != null) {
+        coverImage = `${this.getBaseUrl}${this.$page.entry.cover_image.src}`;
+      }
+      return coverImage;
+    },
+    getBaseUrl() {
+      return process.env.GRIDSOME_BASE_URL;
+    }
   }
 };
 </script>

@@ -16,6 +16,8 @@ module.exports = {
   siteName: "Brody MacLean",
   siteDescription:
     "Brody MacLean is a Lead Product Designer based in Sydney, Australia.",
+  siteUrl: "https://brody.com",
+  titleTemplate: `%s • Brody MacLean`,
 
   templates: {
     Entry: "/:title",
