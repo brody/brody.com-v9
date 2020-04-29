@@ -11,6 +11,7 @@ query Entry ($path: String!) {
     content
     date (format: "DD MMM YYYY")
     cover_image (width: 640, height: 380)
+    og_image (width: 640, height: 380)
     description
     tags {
       id

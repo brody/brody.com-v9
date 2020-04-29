@@ -86,9 +86,11 @@ export default {
   computed: {
     getCoverImage() {
       let coverImage = "";
-      const cover_image = this.$page.entry.cover_image;
+      const cover_image = this.$page.entry.og_image;
       if (cover_image != null) {
-        coverImage = `${this.getBaseUrl}${this.$page.entry.cover_image.src}`;
+        coverImage = `${process.env.GRIDSOME_BASE_URL}${this.$page.entry.og_image.src}`;
+        console.log(process.env.GRIDSOME_BASE_URL);
+        console.log(this.$page.entry.og_image.src);
       }
       return coverImage;
     },
