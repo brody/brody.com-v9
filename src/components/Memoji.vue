@@ -24,8 +24,7 @@ export default {
         "memoji10.png",
         "memoji11.png",
         "memoji12.png",
-        "memoji13.png",
-        "memoji14.png"
+        "memoji13.png"
       ],
       selectedImage: null
     };

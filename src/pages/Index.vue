@@ -114,7 +114,7 @@ import Memoji from "~/components/Memoji.vue";
 
 export default {
   metaInfo: {
-    title: "👋"
+    titleTemplate: "Brody MacLean"
   },
   components: {
     Peek,

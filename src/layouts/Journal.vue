@@ -28,9 +28,9 @@
       </div>
 
       <div class="entry content-box">
-        <div class="entry__header">
+        <figure class="entry__header">
           <g-image alt="Cover image" v-if="$page.entry.cover_image" :src="$page.entry.cover_image" />
-        </div>
+        </figure>
         <div class="entry__content" v-html="$page.entry.content" />
 
       </div>

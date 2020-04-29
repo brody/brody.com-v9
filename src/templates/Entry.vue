@@ -10,6 +10,7 @@ query Entry ($path: String!) {
     title
     content
     date (format: "DD MMM YYYY")
+    cover_image (width: 640, height: 380)
     tags {
       id
       title
