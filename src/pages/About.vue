@@ -109,7 +109,7 @@ export default {
       { name: "twitter:site", content: "@brodymaclean" },
       {
         name: "twitter:image",
-        content: `${process.env.GRIDSOME_BASE_URL}/img/og.png`
+        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
       },
       { name: "twitter:creator", content: "@brodymaclean" },
       { property: "og:type", content: "website" },
@@ -126,11 +126,11 @@ export default {
 
       {
         property: "og:image",
-        content: `${process.env.GRIDSOME_BASE_URL}/img/og.png`
+        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
       },
       {
         property: "og:image:secure_url",
-        content: `${process.env.GRIDSOME_BASE_URL}/img/og.png`
+        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
       }
     ]
   },
