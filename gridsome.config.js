@@ -20,8 +20,9 @@ module.exports = {
   titleTemplate: `%s • Brody MacLean`,
 
   templates: {
-    Entry: "/:title",
+    Entry: "/:slug",
     Tag: "/tag/:id",
+    Work: "/work/:slug",
   },
 
   plugins: [
@@ -36,6 +37,13 @@ module.exports = {
             create: true,
           },
         },
+      },
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        typeName: "Work",
+        path: "content/work/**/*.md",
       },
     },
   ],

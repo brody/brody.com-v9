@@ -2,6 +2,7 @@
 title: Read The Warning Signs
 date: 2018-07-31 10:51:03
 published: true
+slug: warning-signs
 description: You can tell a lot about your initial experience with a company.
 tags:
   - Culture

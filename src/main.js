@@ -8,16 +8,14 @@ import "~/css/prism.css";
 import DefaultLayout from "~/layouts/Default.vue";
 import JournalLayout from "~/layouts/Journal.vue";
 import PageLayout from "~/layouts/Page.vue";
+import WorkLayout from "~/layouts/Work.vue";
 
 export default function(Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component("Layout", DefaultLayout);
   Vue.component("JournalLayout", JournalLayout);
   Vue.component("PageLayout", PageLayout);
-
-  // Add javascript & jquery
-  head.script.push({ src: "/assets/js/theme.js" });
-  head.script.push({ src: "/assets/js/jquery-3.4.1.min.js" });
+  Vue.component("WorkLayout", WorkLayout);
 
   head.link.push({
     rel: "stylesheet",

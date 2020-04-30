@@ -5,6 +5,7 @@ published: true
 tags:
   - Book Notes
   - Culture
+slug: reinventing-organizations
 cover-image: ./img/reinventing-organizations/cover.jpg
 og-image: ./img/reinventing-organizations/cover.jpg
 description: The book that has inspired organizations to take a radical leap and adopt a whole different set of management principles and practices.

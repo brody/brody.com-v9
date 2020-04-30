@@ -4,6 +4,7 @@ date: 2016-07-17
 tags:
   - Side Project
 published: true
+slug: trello-stickers
 cover_image: ./img/trello-stickers/og.png
 og_image: ./img/trello-stickers/og.png
 description: Jazz up your Trello board with these Sticker Sets

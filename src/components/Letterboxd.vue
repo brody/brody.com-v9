@@ -1,38 +1,48 @@
 <template>
-
   <div id="letterboxd" class="mb5">
     <!-- v-if="movies && movies.length" -->
     <div id="recent-movies" class="mb-6">
       <div class="letterboxd">
-
         <div v-for="(items, index) of movies.slice(0, 3)" :key="index">
-
-          <h3><a :href="items.link"> {{ items.title }} </a></h3>
-          <img :src="items.thumbnail">
+          <a :href="items.link">{{ items.title }}</a>
+          <img :src="items.thumbnail" />
           <span class="letterboxd__content" v-html="items.content"></span>
           <!-- <p>{{ relativeDate(items.pubDate, "YYYY-MM-DD HH:mm:ss") }}</p> -->
-
         </div>
-
       </div>
     </div>
 
     <div class="flex flex-wrap mt-1">
-      <a href="https://letterboxd.com/brody/" target="_blank" class="fill-current flex items-center">
-        <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" class="inline-block mr-2">
+      <a
+        href="https://letterboxd.com/brody/"
+        target="_blank"
+        class="fill-current flex items-center"
+      >
+        <svg
+          height="24"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="inline-block mr-2"
+        >
           <g fill="none" fill-rule="nonzero">
             <circle cx="4.421053" cy="11.421053" fill="#ff8000" r="4.421053" />
             <circle cx="12" cy="11.421053" fill="#00e054" r="4.421053" />
-            <path d="m8.21052632 9.14273684c.41443796.68759655.6328494 1.47547946.63158445 2.27831576 0 .8336842-.23074235 1.6130527-.63158445 2.2783158-.4144181-.6876051-.63282798-1.4754823-.63158428-2.2783158 0-.8336842.23074217-1.6130526.63158428-2.27831576z" fill="#fff" />
+            <path
+              d="m8.21052632 9.14273684c.41443796.68759655.6328494 1.47547946.63158445 2.27831576 0 .8336842-.23074235 1.6130527-.63158445 2.2783158-.4144181-.6876051-.63282798-1.4754823-.63158428-2.2783158 0-.8336842.23074217-1.6130526.63158428-2.27831576z"
+              fill="#fff"
+            />
             <circle cx="19.578947" cy="11.421053" fill="#40bcf4" r="4.421053" />
-            <path d="m15.7894737 9.14273684c.4144379.68759655.6328494 1.47547946.6315844 2.27831576 0 .8336842-.2307423 1.6130527-.6315844 2.2783158-.4144181-.6876051-.632828-1.4754823-.6315843-2.2783158 0-.8336842.2307422-1.6130526.6315843-2.27831576z" fill="#fff" />
+            <path
+              d="m15.7894737 9.14273684c.4144379.68759655.6328494 1.47547946.6315844 2.27831576 0 .8336842-.2307423 1.6130527-.6315844 2.2783158-.4144181-.6876051-.632828-1.4754823-.6315843-2.2783158 0-.8336842.2307422-1.6130526.6315843-2.27831576z"
+              fill="#fff"
+            />
           </g>
         </svg>
         <span>Follow on Letterboxd</span>
       </a>
     </div>
   </div>
-
 </template>
 
 <script>

@@ -2,6 +2,7 @@
 title: "Procrastination: It's pretty much all in the mind"
 date: 2018-09-01 00:00:00
 published: true
+slug: procrastination-all-in-the-mind
 description: To procrastinate or not, the answer may be down to differences in how our brains are wired, a study suggests.
 cover-image:
 tags: 

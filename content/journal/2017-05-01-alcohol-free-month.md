@@ -2,6 +2,7 @@
 title: A month off alcohol
 date: 2017-05-01 10:21:03
 published: true
+slug: alcohol-free-month
 tags:
   - Life
 cover-image: ./img/alcohol-free-month/cover.jpg

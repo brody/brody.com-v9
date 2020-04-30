@@ -2,6 +2,7 @@
 title: Cloudbees Design Principles
 date: 2017-05-09 10:21:03
 published: true
+slug: cloudbees-design-principles
 tags:
   - Design
   - Principles

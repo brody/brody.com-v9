@@ -4,9 +4,9 @@ date: 2017-05-02 10:21:03
 tags:
   - Design
   - Development
+slug: nightmode
 cover-image: ./img/brody.com-nightmode/cover.jpg
 og-image: ./img/brody.com-nightmode/cover.jpg
-category: journal
 description: As a fun weekend project, I implemented a Nightmode that kicks in between 6:00pm & 8:00am.
 ---
 

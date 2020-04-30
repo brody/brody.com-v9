@@ -2,6 +2,7 @@
 title: Meeting Warm Up Games
 date: 2019-04-05 00:00:00
 published: true
+slug: meeting-warm-up
 description: Heading to a meeting, I've started running short games to help break the ice and get the creative juices flowing.
 cover-image: ./img/meeting-warm-up/cover.png
 og-image: ./img/meeting-warm-up/og.png
