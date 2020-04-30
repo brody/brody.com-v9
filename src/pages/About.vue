@@ -7,7 +7,7 @@
         <a
           href="http://www.intelligentthought.com.au/"
           target="_blank"
-        >Intelligent Thought</a>, designing software for the insurance industry, that make managing claims easier for insurers brokers and underwriters.
+        >Intelligent Thought</a>, designing software for the insurance industry that makes managing claims easier for insurers, brokers and underwriters.
       </p>
       <p>With 9+ years of experience in product design & a previous 6 years in graphic, print & digital design. A knack for problem-solving & visual design and my keen curiosity has me always looking to expand my knowledge in all things design & technology.</p>
       <figure class="mt-6">

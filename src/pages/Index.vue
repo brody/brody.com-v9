@@ -19,7 +19,7 @@
           imageURL="intro/intro-sydney.jpg"
           class="text-brand-main bg-neutral-800"
           imageClass="max-w-xs sm:max-w-sm"
-        />. Currently, I’m Lead Product Designer, building software for the insurance industry at
+        />. Currently, I’m a Lead Product Designer building software for the insurance industry at
         <Peek
           text="Intelligent Thought"
           imageURL="intro/intro-intelligentthought.jpg"
