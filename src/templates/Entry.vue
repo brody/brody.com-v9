@@ -1,23 +1,18 @@
 <template>
   <JournalLayout>
-
     <div>
-
       <div class="entry-title">
+        <h1 class="entry-title__text">{{ $page.entry.title }}</h1>
 
-        <h1 class="entry-title__text">
-          {{ $page.entry.title }}
-        </h1>
-
-        <span class="entry-meta text-sm text-neutral-700">
-          {{ $page.entry.date }}
+        <span class="entry-meta text-sm text-neutral-700">{{ $page.entry.date }}</span>
+        <span
+          class="entry-tags text-sm text-neutral-700"
+          v-for="tag in $page.entry.tags"
+          :key="tag.id"
+        >
+          •
+          <g-link class="entry-tags__link text-sm text-neutral-700" :to="tag.path">{{ tag.title }}</g-link>
         </span>
-        <span class="entry-tags text-sm text-neutral-700" v-for="tag in $page.entry.tags" :key="tag.id">•
-          <g-link class="entry-tags__link text-sm text-neutral-700" :to="tag.path">
-            {{ tag.title }}
-          </g-link>
-        </span>
-
       </div>
 
       <div class="entry content-box">
@@ -25,11 +20,8 @@
           <g-image alt="Cover image" v-if="$page.entry.cover_image" :src="$page.entry.cover_image" />
         </figure>
         <div class="entry__content" v-html="$page.entry.content" />
-
       </div>
-
     </div>
-
   </JournalLayout>
 </template>
 
@@ -90,12 +82,11 @@ export default {
   computed: {
     getCoverImage() {
       let coverImage = "";
-      const cover_image = this.$page.entry.cover_image;
-      if (cover_image != null) {
-        coverImage = `${process.env.GRIDSOME_BASE_URL}${this.$page.entry.cover_image.src}`;
+      const og_image = this.$page.entry.og_image;
+      if (og_image != null) {
+        coverImage = `${process.env.GRIDSOME_BASE_URL}${this.$page.entry.og_image.src}`;
         console.log(process.env.GRIDSOME_BASE_URL);
-
-        console.log(this.$page.entry.cover_image.src);
+        console.log(this.$page.entry.og_image.src);
       }
       return coverImage;
     },

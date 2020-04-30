@@ -14,8 +14,7 @@ if (process.env.NODE_ENV === "production")
 
 module.exports = {
   siteName: "Brody MacLean",
-  siteDescription:
-    "Brody MacLean is a Lead Product Designer based in Sydney, Australia.",
+  siteDescription: "Brody MacLean is a Lead Product Designer based in Sydney, Australia.",
   siteUrl: "https://brody.com",
   titleTemplate: `%s • Brody MacLean`,
 
@@ -25,8 +24,7 @@ module.exports = {
     Work: "/work/:slug",
   },
 
-  plugins: [
-    {
+  plugins: [{
       use: "@gridsome/source-filesystem",
       options: {
         typeName: "Entry",
@@ -46,6 +44,12 @@ module.exports = {
         path: "content/work/**/*.md",
       },
     },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-60603528-2'
+      }
+    }
   ],
 
   transformers: {
@@ -53,7 +57,9 @@ module.exports = {
       externalLinksTarget: "_blank",
       externalLinksRel: ["nofollow", "noopener", "noreferrer"],
       anchorClassName: "icon icon-link",
-      plugins: [["@gridsome/remark-prismjs"]],
+      plugins: [
+        ["@gridsome/remark-prismjs"]
+      ],
     },
   },
 

@@ -7,7 +7,7 @@ slug: jobadder-nav
 job-title: Lead Product Designer
 year: 2018
 peek-image: work/ja-nav.jpg
-og-image: .img/jobadder/thumb.png
+og-image: ./img/jobadder/og.png
 ---
 
 JobAdder is a global recruitment platform built for staffing agency and in-house corporate recruiters. Used by over 10,000 people every day, we empower recruiters all over the world to recruit smarter and simpler.
