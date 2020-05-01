@@ -85,8 +85,8 @@ export default {
       const og_image = this.$page.entry.og_image;
       if (og_image != null) {
         coverImage = `${process.env.GRIDSOME_BASE_URL}${this.$page.entry.og_image.src}`;
-        console.log(process.env.GRIDSOME_BASE_URL);
-        console.log(this.$page.entry.og_image.src);
+        // console.log(process.env.GRIDSOME_BASE_URL);
+        // console.log(this.$page.entry.og_image.src);
       }
       return coverImage;
     },

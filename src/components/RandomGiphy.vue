@@ -1,7 +1,7 @@
 <template>
   <figure v-if="selectedVideo">
     <video
-      class="w-full max-w-md"
+      class="w-full max-w-md cursor-pointer"
       alt="404"
       autoplay
       muted

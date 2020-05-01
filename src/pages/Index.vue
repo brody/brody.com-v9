@@ -170,10 +170,10 @@ export default {
   components: {
     Peek,
     Memoji
-  },
-  mounted: function() {
-    console.log(process.env.GRIDSOME_BASE_URL);
   }
+  // mounted: function() {
+  //   console.log(process.env.GRIDSOME_BASE_URL);
+  // }
 };
 </script>
 
