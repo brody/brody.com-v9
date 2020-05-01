@@ -8,7 +8,7 @@
     <section class="mb-20 -mt-16">
       <h1 class="mb-6">Page not found</h1>
 
-      <figure v-if="fourofourVideo">
+      <figure v-if="selectedVideos">
         <video
           class="w-full max-w-md"
           alt="404"
@@ -17,7 +17,7 @@
           loop
           playsinline
           autobuffer
-          :src="(fourofourVideo)"
+          :src="(selectedVideos)"
         />
       </figure>
 
@@ -57,12 +57,12 @@ export default {
     };
   },
   methods: {
-    selectedItem(items) {
+    randomItem(items) {
       return items[Math.floor(Math.random() * items.length)];
     }
   },
   created() {
-    this.fourofourVideo = this.selectedItem(this.videos);
+    this.selectedVideos = this.randomItem(this.videos);
   }
 };
 </script>
