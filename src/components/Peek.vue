@@ -7,10 +7,20 @@
   </div>-->
 
   <span class="peek rounded-sm px-05 -mx-05 inline-block" :class="{ peekactive: hover }">
-    <span class="peek__text" @mouseover="hover = true" @mousemove.self="onMouseMove($event)" @mouseleave="hover = false">{{ text }}</span>
-    <g-image class="peek__image pointer-events-none opacity-0 absolute transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-out" :class="imageClass" :style="{ left: page.left + 'px', top: page.top + 'px' }" :alt="text" :src="setURL" />
+    <span
+      class="peek__text"
+      @mouseover="hover = true"
+      @mousemove.self="onMouseMove($event)"
+      @mouseleave="hover = false"
+    >{{ text }}</span>
+    <g-image
+      class="peek__image pointer-events-none opacity-0 absolute transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-500 ease-out"
+      :class="imageClass"
+      :style="{ left: page.left + 'px', top: page.top + 'px' }"
+      :alt="text"
+      :src="setURL"
+    />
   </span>
-
 </template>
 
 <script>
