@@ -17,8 +17,16 @@
         </p>
         <p class="mb-2 pr-16 mt-0">
           Built with 💛,
-          <a href="https://gridsome.org/" target="_blank">Gridsome</a> and
-          <a href="https://tailwindcss.com/" target="_blank">Tailwind CSS</a>.
+          <a
+            href="https://gridsome.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >Gridsome</a> and
+          <a
+            href="https://tailwindcss.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >Tailwind CSS</a>.
         </p>
       </div>
 
