@@ -1,9 +1,12 @@
 <template>
-
   <span v-if="selectedImage">
-    <g-image class="h-full w-auto cursor-pointer" alt="Brody MacLean" :src="require('!!assets-loader!~/assets/img/memoji/' + selectedImage)" @click="generate()" />
+    <g-image
+      class="h-full w-auto cursor-pointer"
+      alt="Brody MacLean"
+      :src="require('!!assets-loader!~/assets/img/memoji/' + selectedImage)"
+      @click="generate()"
+    />
   </span>
-
 </template>
 
 <script>
