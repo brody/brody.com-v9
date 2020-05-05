@@ -72,3 +72,6 @@ export default {
   ]
 };
 </script>
+
+<page-query>
+</page-query>

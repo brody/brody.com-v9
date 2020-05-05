@@ -84,7 +84,7 @@
 
 <page-query>
 query {
-  entries: allEntry (limit: 3) {
+  entries: allEntry (limit: 5) {
     edges {
       node {
         id
@@ -115,7 +115,6 @@ query {
     }
   }
 }
-
 </page-query>
 
 <script>
