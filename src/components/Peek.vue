@@ -19,6 +19,7 @@
       :style="{ left: page.left + 'px', top: page.top + 'px' }"
       :alt="text"
       :src="setURL"
+      :width="imageWidth"
     />
   </span>
 </template>
@@ -29,21 +30,28 @@ export default {
   props: {
     text: {
       type: String,
-      required: true
+      required: true,
     },
     imageURL: {
       type: String,
-      required: true
+      required: true,
     },
     imageClass: {
       type: String,
-      required: false
-    }
+      required: false,
+    },
+    imageWidth: {
+      type: String,
+      required: false,
+    },
   },
   computed: {
-    setURL: function() {
-      return require("~/assets/img/" + this.imageURL);
-    }
+    setURL: function () {
+      return require("!!assets-loader?" +
+        "width=400" +
+        "!~/assets/img/" +
+        this.imageURL);
+    },
   },
 
   data() {
@@ -51,8 +59,8 @@ export default {
       hover: false,
       page: {
         left: 0,
-        top: 0
-      }
+        top: 0,
+      },
     };
   },
 
@@ -60,8 +68,8 @@ export default {
     onMouseMove(e) {
       this.page.left = e.pageX;
       this.page.top = e.pageY;
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -7,23 +7,25 @@
         G'day, I’m
         <Peek
           text="Brody MacLean"
-          imageURL="intro/intro-brody.jpg"
           class="text-brand-main bg-neutral-800"
+          imageURL="intro/intro-brody.jpg"
           imageClass="max-w-xs sm:max-w-sm"
+          imageWidth="230"
         />.
       </h2>
       <p>
         I’m a multi-disciplinary product designer based in
         <Peek
           text="Sydney, Australia"
-          imageURL="intro/intro-sydney.jpg"
           class="text-brand-main bg-neutral-800"
+          imageURL="intro/intro-sydney.jpg"
           imageClass="max-w-xs sm:max-w-sm"
+          imageWidth="230"
         />. Currently, I’m a Lead Product Designer building software for the insurance industry at
         <Peek
           text="Intelligent Thought"
-          imageURL="intro/intro-intelligentthought.jpg"
           class="text-brand-main bg-neutral-800"
+          imageURL="intro/intro-intelligentthought.jpg"
           imageClass="max-w-xs sm:max-w-sm"
         />. Previously I've made things at places like Deputy, Hudl and CloudBees.
       </p>
@@ -129,19 +131,19 @@ export default {
       {
         name: "description",
         content:
-          "A multi-disciplinary product designer based in Sydney, Australia."
+          "A multi-disciplinary product designer based in Sydney, Australia.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:description",
         content:
-          "A multi-disciplinary product designer based in Sydney, Australia."
+          "A multi-disciplinary product designer based in Sydney, Australia.",
       },
       { name: "twitter:title", content: "Brody MacLean" },
       { name: "twitter:site", content: "@brodymaclean" },
       {
         name: "twitter:image",
-        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
+        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`,
       },
       { name: "twitter:creator", content: "@brodymaclean" },
       { property: "og:type", content: "website" },
@@ -149,27 +151,27 @@ export default {
       {
         property: "og:description",
         content:
-          "A multi-disciplinary product designer based in Sydney, Australia."
+          "A multi-disciplinary product designer based in Sydney, Australia.",
       },
       {
         property: "og:url",
-        content: `${process.env.GRIDSOME_BASE_URL}`
+        content: `${process.env.GRIDSOME_BASE_URL}`,
       },
 
       {
         property: "og:image",
-        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
+        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`,
       },
       {
         property: "og:image:secure_url",
-        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
-      }
-    ]
+        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`,
+      },
+    ],
   },
   components: {
     Peek,
-    Memoji
-  }
+    Memoji,
+  },
   // mounted: function() {
   //   console.log(process.env.GRIDSOME_BASE_URL);
   // }

@@ -3,7 +3,7 @@
     <g-image
       class="h-full w-auto cursor-pointer"
       alt="Brody MacLean"
-      :src="require('!!assets-loader!~/assets/img/memoji/' + selectedImage)"
+      :src="require('!!assets-loader?height=144,width=144!~/assets/img/memoji/' + selectedImage)"
       @click="generate()"
     />
   </span>
@@ -35,9 +35,9 @@ export default {
         "memoji18.png",
         "maskmoji1.png",
         "maskmoji2.png",
-        "maskmoji3.png"
+        "maskmoji3.png",
       ],
-      selectedImage: null
+      selectedImage: null,
     };
   },
   methods: {
@@ -46,11 +46,11 @@ export default {
     },
     generate() {
       this.selectedImage = this.randomItem(this.images);
-    }
+    },
   },
   created() {
     this.selectedImage = this.randomItem(this.images);
-  }
+  },
 };
 </script>
 
