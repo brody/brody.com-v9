@@ -48,7 +48,7 @@ export default {
   computed: {
     setURL: function () {
       return require("!!assets-loader?" +
-        "width=400" +
+        "width=650" +
         "!~/assets/img/" +
         this.imageURL);
     },
