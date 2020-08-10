@@ -46,14 +46,14 @@
       <div v-for="entry in $page.entries.edges" :key="entry.id" class="my-2 py-2">
         <g-link :to="entry.node.path">{{ entry.node.title }}</g-link>
         <div>{{ entry.node.description }}</div>
-        <span class="text-neutral-700 text-sm mt-1">{{ entry.node.date }}</span>
+        <span class="text-neutral-600 text-sm mt-1">{{ entry.node.date }}</span>
         <span
-          class="entry-tags text-sm text-neutral-700"
+          class="entry-tags text-sm text-neutral-600"
           v-for="tag in entry.node.tags"
           :key="tag.id"
         >
           •
-          <g-link class="entry-tags__link text-sm text-neutral-700" :to="tag.path">{{ tag.title }}</g-link>
+          <g-link class="entry-tags__link text-sm text-neutral-600" :to="tag.path">{{ tag.title }}</g-link>
         </span>
       </div>
 
@@ -78,7 +78,7 @@
           />
         </g-link>
         <div>{{ work.node.description }}</div>
-        <span class="text-neutral-700 text-sm mt-1">{{ work.node.year }} • {{ work.node.job_title }}</span>
+        <span class="text-neutral-600 text-sm mt-1">{{ work.node.year }} • {{ work.node.job_title }}</span>
       </div>
     </section>
   </Layout>

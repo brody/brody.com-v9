@@ -3,7 +3,7 @@
     <g-image
       class="h-full w-auto cursor-pointer"
       alt="Brody MacLean"
-      :src="require('!!assets-loader?height=144,width=144!~/assets/img/memoji/' + selectedImage)"
+      :src="require('!!assets-loader?height=144&width=144!~/assets/img/memoji/' + selectedImage)"
       @click="generate()"
     />
   </span>
