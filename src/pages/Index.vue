@@ -44,7 +44,9 @@
       >I sometimes jot down my thoughts on things ranging from design, technology and life in general.</p>
 
       <div v-for="entry in $page.entries.edges" :key="entry.id" class="my-2 py-2">
-        <g-link :to="entry.node.path">{{ entry.node.title }}</g-link>
+        <h3 class="font-medium mb-1">
+          <g-link :to="entry.node.path">{{ entry.node.title }}</g-link>
+        </h3>
         <div>{{ entry.node.description }}</div>
         <span class="text-neutral-600 text-sm mt-1">{{ entry.node.date }}</span>
         <span
@@ -70,13 +72,15 @@
       <p class="text-neutral-600 mt-2 mb-4">A selection of some projects I've been working on.</p>
 
       <div v-for="work in $page.work.edges" :key="work.id" class="my-2 py-2">
-        <g-link :to="work.node.path">
-          <Peek
-            :text="work.node.title"
-            :imageURL="work.node.peek_image"
-            imageClass="hidden md:block max-w-lg"
-          />
-        </g-link>
+        <h3 class="font-medium mb-1">
+          <g-link :to="work.node.path">
+            <Peek
+              :text="work.node.title"
+              :imageURL="work.node.peek_image"
+              imageClass="hidden md:block max-w-lg"
+            />
+          </g-link>
+        </h3>
         <div>{{ work.node.description }}</div>
         <span class="text-neutral-600 text-sm mt-1">{{ work.node.year }} • {{ work.node.job_title }}</span>
       </div>
