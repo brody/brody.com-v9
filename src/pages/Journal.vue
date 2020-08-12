@@ -8,7 +8,7 @@
       >I sometimes jot down my thoughts on things ranging from design, technology and life in general.</p>
 
       <div v-for="entry in $page.entries.edges" :key="entry.id" class="my-2 py-2">
-        <h3 class="mb-1 font-normal">
+        <h3 class="mb-1 font-medium">
           <g-link :to="entry.node.path">{{ entry.node.title }}</g-link>
         </h3>
         <div>{{ entry.node.description }}</div>

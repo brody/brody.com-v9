@@ -1,58 +1,58 @@
-const tailwind = require("tailwindcss");
-const purgecss = require("@fullhuman/postcss-purgecss");
+const tailwind = require('tailwindcss');
+const purgecss = require('@fullhuman/postcss-purgecss');
 
 const postcssPlugins = [tailwind()];
 
-if (process.env.NODE_ENV === "production")
-  postcssPlugins.push(purgecss(require("./purgecss.config.js")));
+if (process.env.NODE_ENV === 'production')
+  postcssPlugins.push(purgecss(require('./purgecss.config.js')));
 
 module.exports = {
-  siteName: "Gridsome",
+  siteName: 'Gridsome',
   plugins: [],
   css: {
     loaderOptions: {
       postcss: {
-        plugins: postcssPlugins,
-      },
-    },
-  },
+        plugins: postcssPlugins
+      }
+    }
+  }
 };
 
 module.exports = {
   theme: {
     extend: {
       zIndex: {
-        "-10": "-10",
+        '-10': '-10'
       },
       colors: {
         neutral: {
-          100: "var(--brody-neutral-100)",
-          200: "var(--brody-neutral-200)",
-          300: "var(--brody-neutral-300)",
-          400: "var(--brody-neutral-400)",
-          500: "var(--brody-neutral-500)",
-          600: "var(--brody-neutral-600)",
-          700: "var(--brody-neutral-700)",
-          800: "var(--brody-neutral-800)",
-          900: "var(--brody-neutral-900)",
+          100: 'var(--brody-neutral-100)',
+          200: 'var(--brody-neutral-200)',
+          300: 'var(--brody-neutral-300)',
+          400: 'var(--brody-neutral-400)',
+          500: 'var(--brody-neutral-500)',
+          600: 'var(--brody-neutral-600)',
+          700: 'var(--brody-neutral-700)',
+          800: 'var(--brody-neutral-800)',
+          900: 'var(--brody-neutral-900)'
         },
         neutrala: {
-          05: "var(--brody-neutrala-05)",
-          10: "var(--brody-neutrala-10)",
-          20: "var(--brody-neutrala-20)",
-          30: "var(--brody-neutrala-30)",
-          40: "var(--brody-neutrala-40)",
-          50: "var(--brody-neutrala-50)",
-          60: "var(--brody-neutrala-60)",
-          70: "var(--brody-neutrala-70)",
-          80: "var(--brody-neutrala-80)",
-          90: "var(--brody-neutrala-90)",
+          05: 'var(--brody-neutrala-05)',
+          10: 'var(--brody-neutrala-10)',
+          20: 'var(--brody-neutrala-20)',
+          30: 'var(--brody-neutrala-30)',
+          40: 'var(--brody-neutrala-40)',
+          50: 'var(--brody-neutrala-50)',
+          60: 'var(--brody-neutrala-60)',
+          70: 'var(--brody-neutrala-70)',
+          80: 'var(--brody-neutrala-80)',
+          90: 'var(--brody-neutrala-90)'
         },
         brand: {
-          main: "var(--brody-brand-main)",
-          bright: "var(--brody-brand-bright)",
-          dim: "var(--brody-brand-dim)",
-        },
+          main: 'var(--brody-brand-main)',
+          bright: 'var(--brody-brand-bright)',
+          dim: 'var(--brody-brand-dim)'
+        }
       },
       // fontSize: {
       // 'xs': '.75rem',
@@ -71,39 +71,39 @@ module.exports = {
       // },
       fontFamily: {
         sans: [
-          '"Inter"',
-          "-apple-system",
-          "BlinkMacSystemFont",
+          '"Space Grotesk"',
+          '-apple-system',
+          'BlinkMacSystemFont',
           '"Segoe UI"',
-          "Roboto",
+          'Roboto',
           '"Helvetica Neue"',
-          "Arial",
+          'Arial',
           '"Noto Sans"',
-          "sans-serif",
+          'sans-serif',
           '"Apple Color Emoji"',
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
+          '"Noto Color Emoji"'
+        ]
       },
       spacing: {
         full: {
-          10: "10%",
-          20: "20%",
-          30: "30%",
-          40: "40%",
-          50: "50%",
-          60: "60%",
-          70: "70%",
-          80: "80%",
-          90: "90%",
+          10: '10%',
+          20: '20%',
+          30: '30%',
+          40: '40%',
+          50: '50%',
+          60: '60%',
+          70: '70%',
+          80: '80%',
+          90: '90%'
         },
-        "025": "0.0625rem",
-        "05": "0.125rem",
-        "7": "1.75rem",
+        '025': '0.0625rem',
+        '05': '0.125rem',
+        '7': '1.75rem'
       },
-      borderWidth: {},
-    },
+      borderWidth: {}
+    }
     // container: {},
     // fontFamily: {
     // sans: [
@@ -138,5 +138,5 @@ module.exports = {
   },
   plugins: [
     // Some useful comment
-  ],
+  ]
 };

@@ -3,6 +3,28 @@
 @tailwind base;
 @tailwind components;
 
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
+    url('../assets/fonts/SpaceGrotesk-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
+    url('../assets/fonts/SpaceGrotesk-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../assets/fonts/SpaceGrotesk-SemiBold.woff2') format('woff2'),
+    url('../assets/fonts/SpaceGrotesk-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 18px;
@@ -52,7 +74,7 @@ ol li {
 }
 
 ol > li::before {
-  content: counter(olcount) ".";
+  content: counter(olcount) '.';
   font-size: 1em;
   left: -2.35rem;
   @apply py-1 absolute top-0 right-0 opacity-50 inline-block w-8 text-right;
@@ -84,7 +106,7 @@ ol li ul {
 }
 
 ul > li::before {
-  content: "•";
+  content: '•';
   font-size: 1em;
   left: -2.35rem;
   @apply py-1 absolute top-0 opacity-50 inline-block w-8 text-right;
@@ -128,8 +150,8 @@ p > code {
   @apply px-1 py-05;
 }
 
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
   @apply leading-normal;
 }
 
