@@ -38,10 +38,7 @@
     </section>
 
     <section class="mb-16 md:mb-24 lg:mb-32">
-      <h2 class="mb-3">Journal</h2>
-      <p
-        class="text-neutral-600 mt-2 mb-4"
-      >I sometimes jot down my thoughts on things ranging from design, technology and life in general.</p>
+      <h2 class="mb-4">Journal</h2>
 
       <div v-for="entry in $page.entries.edges" :key="entry.id" class="my-2 py-2">
         <h3 class="font-medium mb-1">
@@ -68,8 +65,7 @@
     </section>
 
     <section class="mb-16 md:mb-24 lg:mb-32" id="featured-work">
-      <h2 class="mb-3">Featured work</h2>
-      <p class="text-neutral-600 mt-2 mb-4">A selection of some projects I've been working on.</p>
+      <h2 class="mb-4">Featured work</h2>
 
       <div v-for="work in $page.work.edges" :key="work.id" class="my-2 py-2">
         <h3 class="font-medium mb-1">

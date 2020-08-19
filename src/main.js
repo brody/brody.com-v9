@@ -17,15 +17,15 @@ export default function(Vue, { router, head, isClient }) {
   Vue.component('PageLayout', PageLayout);
   Vue.component('WorkLayout', WorkLayout);
 
-  // head.link.push({
-  //   rel: "stylesheet",
-  //   href:
-  //     "https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap",
-  // });
+  head.link.push({
+    rel: 'stylesheet',
+    href:
+      'https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap',
+  });
 
   // Add attributes to BODY tag
   head.bodyAttrs = {
     class:
-      'bg-neutral-900 font-sans text-neutral-500 antialiased max-w-screen-lg mx-auto px-4 sm:px-8 md:px-12 reative my-40 md:mt-48 lg:mt-56'
+      'bg-neutral-900 font-sans text-neutral-500 antialiased max-w-screen-lg mx-auto px-4 sm:px-8 md:px-12 reative my-40 md:mt-48 lg:mt-56',
   };
 }
