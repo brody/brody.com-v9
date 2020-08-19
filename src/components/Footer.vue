@@ -31,7 +31,7 @@
       </div>
 
       <div class="w-1/2 sm:w-1/4 md:w-1/6 flex flex-col items-start">
-        <p class="mb-4 mt-0">Navigate</p>
+        <p class="mb-4 mt-0 text-color-mid">Navigate</p>
         <g-link to="/" class="py-1">Home</g-link>
         <g-link to="/about/" class="py-1">About</g-link>
         <g-link to="/journal/" class="py-1">Journal</g-link>
@@ -39,12 +39,12 @@
       </div>
 
       <div class="w-1/2 sm:w-1/4 md:w-1/6 flex flex-col items-start">
-        <p class="mb-4 mt-0">Connect</p>
+        <p class="mb-4 mt-0 text-color-mid">Connect</p>
         <a
           href="https://twitter.com/BrodyMaclean"
           target="_blank"
           rel="noopener noreferrer"
-          class="py-1"
+          class="py-1 shadow-none"
         >Twitter</a>
         <a
           href="https://instagram.com/Brody"
@@ -87,8 +87,8 @@ import Memoji from "~/components/Memoji.vue";
 
 export default {
   components: {
-    Memoji
-  }
+    Memoji,
+  },
 };
 </script>
 

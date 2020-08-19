@@ -26,6 +26,6 @@ export default function(Vue, { router, head, isClient }) {
   // Add attributes to BODY tag
   head.bodyAttrs = {
     class:
-      'bg-neutral-900 font-sans text-neutral-500 antialiased max-w-screen-lg mx-auto px-4 sm:px-8 md:px-12 reative my-40 md:mt-48 lg:mt-56',
+      'bg-color-bg font-sans text-color-main antialiased max-w-screen-lg mx-auto px-4 sm:px-8 md:px-12 reative my-40 md:mt-48 lg:mt-56',
   };
 }

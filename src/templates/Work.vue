@@ -4,7 +4,7 @@
       <div class="work-title">
         <h1 class="work-title__text">{{ $page.work.title }}</h1>
 
-        <span class="work-meta text-sm text-neutral-700">{{ $page.work.date }}</span>
+        <span class="work-meta text-sm text-color-mid">{{ $page.work.date }}</span>
       </div>
 
       <div class="work content-box">
@@ -53,17 +53,17 @@ export default {
         { property: "og:description", content: this.$page.work.description },
         {
           property: "og:url",
-          content: `${this.getBaseUrl}${this.$page.work.path}`
+          content: `${this.getBaseUrl}${this.$page.work.path}`,
         },
         {
           property: "article:published_time",
-          content: moment(this.$page.work.date).format("MM-DD-YYYY")
+          content: moment(this.$page.work.date).format("MM-DD-YYYY"),
         },
         { property: "og:updated_time", content: this.$page.work.date },
         { property: "og:image", content: this.getCoverImage },
-        { property: "og:image:secure_url", content: this.getCoverImage }
+        { property: "og:image:secure_url", content: this.getCoverImage },
       ],
-      script: [{ src: "https://platform.twitter.com/widgets.js", async: true }]
+      script: [{ src: "https://platform.twitter.com/widgets.js", async: true }],
     };
   },
   computed: {
@@ -79,7 +79,7 @@ export default {
     },
     getBaseUrl() {
       return process.env.GRIDSOME_BASE_URL;
-    }
-  }
+    },
+  },
 };
 </script>

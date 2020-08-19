@@ -10,19 +10,19 @@
 }
 
 h1 {
-  @apply text-2xl leading-snug font-semibold text-neutral-300 mt-12 mb-5;
+  @apply text-2xl leading-snug font-semibold text-color-main mt-12 mb-5;
 }
 
 h2 {
-  @apply text-xl leading-snug font-semibold text-neutral-300 mt-10 mb-4;
+  @apply text-xl leading-snug font-semibold mt-10 mb-4;
 }
 
 h3 {
-  @apply text-lg leading-normal font-semibold text-neutral-300 mt-8 mb-3;
+  @apply text-lg leading-normal font-semibold text-color-mid mt-8 mb-3;
 }
 
 h4 {
-  @apply text-base leading-normal font-semibold text-neutral-300 mt-6 mb-2;
+  @apply text-base leading-normal font-semibold text-color-mid mt-6 mb-2;
 }
 
 h1:first-child,
@@ -37,10 +37,27 @@ p {
 }
 
 a {
-  @apply text-brand-bright;
+  @apply text-color-main;
 }
 a:hover {
-  @apply text-brand-dim;
+  @apply text-color-accent;
+}
+p a,
+li a,
+blockquote a,
+figcaption a,
+a.link {
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0),
+    inset 0 -1px 0 var(--color-mid);
+}
+
+p a:hover,
+li a:hover,
+blockquote a:hover,
+figcaption a:hover,
+a.link:hover {
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0),
+    inset 0 -1px 0 var(--color-accent);
 }
 
 ol {
@@ -98,10 +115,10 @@ ul ul {
 }
 
 blockquote {
-  @apply my-6 border-l-4 border-neutral-800 pl-5 py-1;
+  @apply my-6 border-l-4 border-color-mild pl-5 py-1;
 }
 blockquote p {
-  @apply py-1 px-0 m-0;
+  @apply text-color-main py-1 px-0 m-0;
 }
 
 blockquote blockquote {
@@ -113,15 +130,15 @@ blockquote cite {
 }
 
 hr {
-  @apply w-full h-px bg-neutral-800 my-10 border-none;
+  @apply w-full h-px bg-color-dim my-10 border-none;
 }
 
 mark {
-  @apply bg-neutral-800 text-brand-main rounded-sm px-05 -mx-05;
+  @apply bg-color-dim text-color-accent rounded-sm px-1 py-05 -mx-1 -my-05;
 }
 
 code {
-  @apply text-neutral-200 font-mono bg-neutral-800 rounded text-sm;
+  @apply text-color-main font-mono bg-color-dim rounded text-sm;
 }
 
 p > code {
@@ -134,7 +151,7 @@ pre[class*='language-'] {
 }
 
 pre {
-  @apply text-sm font-mono text-neutral-200 bg-neutral-800 overflow-x-scroll p-4 rounded my-4;
+  @apply text-sm font-mono text-color-main bg-color-dim overflow-x-scroll p-4 rounded my-4;
 }
 
 img {
@@ -148,7 +165,7 @@ iframe,
 }
 
 figcaption {
-  @apply text-sm text-neutral-600 leading-snug pt-2 px-2 text-center;
+  @apply text-sm text-color-mild leading-snug pt-2 px-2 text-center;
 }
 
 table {
@@ -156,19 +173,20 @@ table {
 }
 
 table th {
-  @apply font-semibold text-left text-neutral-400;
+  @apply font-semibold text-left text-color-mid;
 }
 
 table td,
 table th {
-  @apply border border-neutral-800 px-2 py-1 align-text-top;
+  @apply border border-color-dim px-2 py-1 align-text-top;
 }
 
 /* Nav */
 
 nav {
-  @apply bg-neutrala-70;
   backdrop-filter: blur(20px);
+  /* tk */
+  background: rgba(20, 20, 20, 0.7);
 }
 
 .\31 6\/9 {
@@ -183,28 +201,12 @@ nav {
 }
 
 :root {
-  --brody-brand-main: #74ddc3;
-  --brody-brand-bright: #efcb15;
-  --brody-brand-dim: #a97704;
-  --brody-neutral-100: #f0f4f9;
-  --brody-neutral-200: #e6ebf4;
-  --brody-neutral-300: #dadfec;
-  --brody-neutral-400: #c5cddd;
-  --brody-neutral-500: #9aa3bc;
-  --brody-neutral-600: #6c7593;
-  --brody-neutral-700: #464c62;
-  --brody-neutral-800: #292e42;
-  --brody-neutral-900: #171926;
-  --brody-neutrala-05: rgba(23, 25, 38, 0.05);
-  --brody-neutrala-10: rgba(23, 25, 38, 0.1);
-  --brody-neutrala-20: rgba(23, 25, 38, 0.2);
-  --brody-neutrala-30: rgba(23, 25, 38, 0.3);
-  --brody-neutrala-40: rgba(23, 25, 38, 0.4);
-  --brody-neutrala-50: rgba(23, 25, 38, 0.5);
-  --brody-neutrala-60: rgba(23, 25, 38, 0.6);
-  --brody-neutrala-70: rgba(23, 25, 38, 0.7);
-  --brody-neutrala-80: rgba(23, 25, 38, 0.8);
-  --brody-neutrala-90: rgba(23, 25, 38, 0.9);
+  --color-main: #ddd;
+  --color-mid: #888;
+  --color-mild: #555;
+  --color-dim: #24292e;
+  --color-bg: #141414;
+  --color-accent: #1cceab;
 }
 
 /* purgecss end ignore */

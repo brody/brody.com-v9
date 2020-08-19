@@ -54,7 +54,7 @@ export default {
   data() {
     return {
       movies: [],
-      errors: []
+      errors: [],
     };
   },
 
@@ -64,21 +64,19 @@ export default {
       .get(
         "https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fletterboxd.com%2Fbrody%2Frss%2F"
       )
-      .then(response => {
+      .then((response) => {
         // JSON responses are automatically parsed.
         this.movies = response.data.items;
       })
-      .catch(e => {
+      .catch((e) => {
         this.errors.push(e);
       });
   },
   methods: {
     relativeDate(date) {
-      return moment(date)
-        .startOf("day")
-        .fromNow();
-    }
-  }
+      return moment(date).startOf("day").fromNow();
+    },
+  },
 };
 </script>
 

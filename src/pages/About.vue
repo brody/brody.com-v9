@@ -29,7 +29,7 @@
 
     <section class="mb-20">
       <h2 class="mb-5">Connect with me</h2>
-      <p class="flex flex-wrap">
+      <div class="flex flex-wrap">
         <a
           href="https://twitter.com/BrodyMaclean"
           target="_blank"
@@ -135,7 +135,7 @@
           </svg>
           Email
         </a>
-      </p>
+      </div>
     </section>
 
     <section class="mb-20">
@@ -168,19 +168,19 @@ export default {
       {
         name: "description",
         content:
-          "A multi-disciplinary product designer based in Sydney, Australia."
+          "A multi-disciplinary product designer based in Sydney, Australia.",
       },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:description",
         content:
-          "A multi-disciplinary product designer based in Sydney, Australia."
+          "A multi-disciplinary product designer based in Sydney, Australia.",
       },
       { name: "twitter:title", content: "About Brody MacLean" },
       { name: "twitter:site", content: "@brodymaclean" },
       {
         name: "twitter:image",
-        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
+        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`,
       },
       { name: "twitter:creator", content: "@brodymaclean" },
       { property: "og:type", content: "website" },
@@ -188,29 +188,29 @@ export default {
       {
         property: "og:description",
         content:
-          "A multi-disciplinary product designer based in Sydney, Australia."
+          "A multi-disciplinary product designer based in Sydney, Australia.",
       },
       {
         property: "og:url",
-        content: `${process.env.GRIDSOME_BASE_URL}`
+        content: `${process.env.GRIDSOME_BASE_URL}`,
       },
 
       {
         property: "og:image",
-        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
+        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`,
       },
       {
         property: "og:image:secure_url",
-        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
-      }
-    ]
+        content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`,
+      },
+    ],
   },
 
   components: {
     Goodreads,
     LastFM,
-    Letterboxd
-  }
+    Letterboxd,
+  },
 };
 </script>
 

@@ -4,14 +4,14 @@
       <div class="entry-title">
         <h1 class="entry-title__text">{{ $page.entry.title }}</h1>
 
-        <span class="entry-meta text-sm text-neutral-600">{{ $page.entry.date }}</span>
+        <span class="entry-meta text-sm text-color-mid">{{ $page.entry.date }}</span>
         <span
-          class="entry-tags text-sm text-neutral-600"
+          class="entry-tags text-sm text-color-mild"
           v-for="tag in $page.entry.tags"
           :key="tag.id"
         >
           •
-          <g-link class="entry-tags__link text-sm text-neutral-600" :to="tag.path">{{ tag.title }}</g-link>
+          <g-link class="entry-tags__link text-sm text-color-mid" :to="tag.path">{{ tag.title }}</g-link>
         </span>
       </div>
 

@@ -7,7 +7,7 @@
         G'day, I’m
         <Peek
           text="Brody MacLean"
-          class="text-brand-main bg-neutral-800"
+          class="text-color-main bg-color-dim cursor-default px-1 -mx-1"
           imageURL="intro/intro-brody.jpg"
           imageClass="max-w-xs sm:max-w-sm"
           imageWidth="230"
@@ -17,14 +17,14 @@
         I’m a multi-disciplinary product designer based in
         <Peek
           text="Sydney, Australia"
-          class="text-brand-main bg-neutral-800"
+          class="text-color-main bg-color-dim cursor-default px-1 -mx-1"
           imageURL="intro/intro-sydney.jpg"
           imageClass="max-w-xs sm:max-w-sm"
           imageWidth="230"
         />. Currently, I’m a Lead Product Designer building software for the insurance industry at
         <Peek
           text="Intelligent Thought"
-          class="text-brand-main bg-neutral-800"
+          class="text-color-main bg-color-dim cursor-default px-1 -mx-1"
           imageURL="intro/intro-intelligentthought.jpg"
           imageClass="max-w-xs sm:max-w-sm"
         />. Previously I've made things at places like Deputy, Hudl and CloudBees.
@@ -38,21 +38,21 @@
     </section>
 
     <section class="mb-16 md:mb-24 lg:mb-32">
-      <h2 class="mb-4">Journal</h2>
+      <h2 class="mb-4 text-color-mid">Journal</h2>
 
       <div v-for="entry in $page.entries.edges" :key="entry.id" class="my-2 py-2">
         <h3 class="font-medium mb-1">
-          <g-link :to="entry.node.path">{{ entry.node.title }}</g-link>
+          <g-link class="link" :to="entry.node.path">{{ entry.node.title }}</g-link>
         </h3>
         <div>{{ entry.node.description }}</div>
-        <span class="text-neutral-600 text-sm mt-1">{{ entry.node.date }}</span>
+        <span class="text-color-mid text-sm mt-1">{{ entry.node.date }}</span>
         <span
-          class="entry-tags text-sm text-neutral-600"
+          class="entry-tags text-sm text-color-mild"
           v-for="tag in entry.node.tags"
           :key="tag.id"
         >
           •
-          <g-link class="entry-tags__link text-sm text-neutral-600" :to="tag.path">{{ tag.title }}</g-link>
+          <g-link class="entry-tags__link text-sm text-color-mid" :to="tag.path">{{ tag.title }}</g-link>
         </span>
       </div>
 
@@ -65,11 +65,11 @@
     </section>
 
     <section class="mb-16 md:mb-24 lg:mb-32" id="featured-work">
-      <h2 class="mb-4">Featured work</h2>
+      <h2 class="mb-4 text-color-mid">Featured work</h2>
 
       <div v-for="work in $page.work.edges" :key="work.id" class="my-2 py-2">
         <h3 class="font-medium mb-1">
-          <g-link :to="work.node.path">
+          <g-link class="link" :to="work.node.path">
             <Peek
               :text="work.node.title"
               :imageURL="work.node.peek_image"
@@ -78,7 +78,11 @@
           </g-link>
         </h3>
         <div>{{ work.node.description }}</div>
-        <span class="text-neutral-600 text-sm mt-1">{{ work.node.year }} • {{ work.node.job_title }}</span>
+        <span class="text-color-mid text-sm mt-1">
+          {{ work.node.year }}
+          <span class="text-color-mild">•</span>
+          {{ work.node.job_title }}
+        </span>
       </div>
     </section>
   </Layout>

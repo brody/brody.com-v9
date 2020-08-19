@@ -10,7 +10,7 @@
 
       <RandomGiphy />
 
-      <!-- <p class="text-neutral-600 mt-2 mb-4">t
+      <!-- <p class="text-color-mild mt-2 mb-4">t
         It's probably best to head
         <g-link to="/">home</g-link>.
       </p>-->
@@ -24,29 +24,29 @@ import RandomGiphy from "~/components/RandomGiphy.vue";
 
 export default {
   metaInfo: {
-    title: "404"
+    title: "404",
   },
   components: {
-    RandomGiphy
+    RandomGiphy,
   },
   meta: [
     { name: "author", content: "Brody MacLean" },
     {
       name: "description",
       content:
-        "A multi-disciplinary product designer based in Sydney, Australia."
+        "A multi-disciplinary product designer based in Sydney, Australia.",
     },
     { name: "twitter:card", content: "summary_large_image" },
     {
       name: "twitter:description",
       content:
-        "A multi-disciplinary product designer based in Sydney, Australia."
+        "A multi-disciplinary product designer based in Sydney, Australia.",
     },
     { name: "twitter:title", content: "Brody MacLean" },
     { name: "twitter:site", content: "@brodymaclean" },
     {
       name: "twitter:image",
-      content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
+      content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`,
     },
     { name: "twitter:creator", content: "@brodymaclean" },
     { property: "og:type", content: "website" },
@@ -54,22 +54,22 @@ export default {
     {
       property: "og:description",
       content:
-        "A multi-disciplinary product designer based in Sydney, Australia."
+        "A multi-disciplinary product designer based in Sydney, Australia.",
     },
     {
       property: "og:url",
-      content: `${process.env.GRIDSOME_BASE_URL}`
+      content: `${process.env.GRIDSOME_BASE_URL}`,
     },
 
     {
       property: "og:image",
-      content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
+      content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`,
     },
     {
       property: "og:image:secure_url",
-      content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`
-    }
-  ]
+      content: `${process.env.GRIDSOME_BASE_URL}/assets/img/og.png`,
+    },
+  ],
 };
 </script>
 

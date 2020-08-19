@@ -1,17 +1,23 @@
 <template>
-
   <section id="goodreads">
-    <div id="gr_custom_widget_1532863785" class="">
+    <div id="gr_custom_widget_1532863785" class>
       <div class="gr_custom_container_1532863785">
         <div class="gr_custom_each_container_1532863785">
           <div class="gr_custom_book_container_1532863785">
-            <a title="Ready Player One" rel="nofollow" href="#"><img alt="Ready Player One" border="0" src="https://images.gr-assets.com/books/1500930947m/9969571.jpg" /></a>
+            <a title="Ready Player One" rel="nofollow" href="#">
+              <img
+                alt="Ready Player One"
+                border="0"
+                src="https://images.gr-assets.com/books/1500930947m/9969571.jpg"
+              />
+            </a>
           </div>
           <div class="gr_custom_title_1532863785">
             <a rel="nofollow" href="#">Ready Player One</a>
           </div>
           <div class="gr_custom_author_1532863785">
-            by <a rel="nofollow" href="#">Ernest Cline</a>
+            by
+            <a rel="nofollow" href="#">Ernest Cline</a>
           </div>
         </div>
 
@@ -19,13 +25,15 @@
           Share
           <a rel="nofollow" href="https://www.goodreads.com/">book reviews</a>
           and ratings with Brody, and even join a
-          <a rel="nofollow" href="https://www.goodreads.com/group">book club</a>
+          <a
+            rel="nofollow"
+            href="https://www.goodreads.com/group"
+          >book club</a>
           on Goodreads.
         </noscript>
       </div>
     </div>
   </section>
-
 </template>
 
 <script>
@@ -40,7 +48,7 @@ export default {
     );
     document.head.appendChild(recaptchaScript);
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
@@ -73,9 +81,9 @@ export default {
 }
 
 .gr_custom_author_1532863785 {
-  @apply col-span-1 row-span-1  col-start-2 row-start-2 self-start;
+  @apply col-span-1 row-span-1 col-start-2 row-start-2 self-start text-color-mid;
 }
 .gr_custom_author_1532863785 a {
-  @apply text-neutral-500;
+  @apply text-color-mid;
 }
 </style>
