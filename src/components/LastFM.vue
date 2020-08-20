@@ -208,7 +208,7 @@ export default {
 }
 
 #lastFM-recent-tracks ul li div.date {
-  @apply col-span-1 row-span-1 col-start-2 row-start-3 self-start text-sm text-color-mild pt-1;
+  @apply col-span-1 row-span-1 col-start-2 row-start-3 self-start text-sm text-color-mid pt-1;
 }
 
 #lastFM-top-artists ul li div.artist {
@@ -216,6 +216,6 @@ export default {
 }
 
 #lastFM-top-artists ul li div.play-count {
-  @apply col-span-1 row-span-1 col-start-2 row-start-2 self-start pt-1 text-sm text-color-mild pt-1;
+  @apply col-span-1 row-span-1 col-start-2 row-start-2 self-start pt-1 text-sm text-color-mid pt-1;
 }
 </style>

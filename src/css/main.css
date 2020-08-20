@@ -134,7 +134,7 @@ hr {
 }
 
 mark {
-  @apply bg-color-dim text-color-accent rounded-sm px-1 py-05 -mx-1 -my-05;
+  @apply bg-color-dim text-color-main rounded-md px-1 py-05 -mx-1 -my-05;
 }
 
 code {

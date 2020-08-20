@@ -7,7 +7,7 @@
         G'day, I’m
         <Peek
           text="Brody MacLean"
-          class="text-color-main bg-color-dim cursor-default px-1 -mx-1"
+          class="text-color-main bg-color-dim cursor-default"
           imageURL="intro/intro-brody.jpg"
           imageClass="max-w-xs sm:max-w-sm"
           imageWidth="230"
@@ -17,14 +17,14 @@
         I’m a multi-disciplinary product designer based in
         <Peek
           text="Sydney, Australia"
-          class="text-color-main bg-color-dim cursor-default px-1 -mx-1"
+          class="text-color-main bg-color-dim cursor-default"
           imageURL="intro/intro-sydney.jpg"
           imageClass="max-w-xs sm:max-w-sm"
           imageWidth="230"
         />. Currently, I’m a Lead Product Designer building software for the insurance industry at
         <Peek
           text="Intelligent Thought"
-          class="text-color-main bg-color-dim cursor-default px-1 -mx-1"
+          class="text-color-main bg-color-dim cursor-default"
           imageURL="intro/intro-intelligentthought.jpg"
           imageClass="max-w-xs sm:max-w-sm"
         />. Previously I've made things at places like Deputy, Hudl and CloudBees.

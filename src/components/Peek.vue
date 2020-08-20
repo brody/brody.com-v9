@@ -6,7 +6,7 @@
     </button>
   </div>-->
 
-  <span class="peek rounded-sm px-05 -mx-05 inline-block" :class="{ peekactive: hover }">
+  <span class="peek px-1 -mx-05 rounded-lg inline-block" :class="{ peekactive: hover }">
     <span
       class="peek__text"
       @mouseover="hover = true"
