@@ -12,17 +12,17 @@ module.exports = {
   css: {
     loaderOptions: {
       postcss: {
-        plugins: postcssPlugins,
-      },
-    },
-  },
+        plugins: postcssPlugins
+      }
+    }
+  }
 };
 
 module.exports = {
   theme: {
     extend: {
       zIndex: {
-        '-10': '-10',
+        '-10': '-10'
       },
       colors: {
         color: {
@@ -31,8 +31,8 @@ module.exports = {
           mild: 'var(--color-mild)',
           dim: 'var(--color-dim)',
           bg: 'var(--color-bg)',
-          accent: 'var(--color-accent)',
-        },
+          accent: 'var(--color-accent)'
+        }
       },
       // fontSize: {
       // 'xs': '.75rem',
@@ -63,8 +63,8 @@ module.exports = {
           '"Apple Color Emoji"',
           '"Segoe UI Emoji"',
           '"Segoe UI Symbol"',
-          '"Noto Color Emoji"',
-        ],
+          '"Noto Color Emoji"'
+        ]
       },
       spacing: {
         full: {
@@ -76,14 +76,14 @@ module.exports = {
           60: '60%',
           70: '70%',
           80: '80%',
-          90: '90%',
+          90: '90%'
         },
         '025': '0.0625rem',
         '05': '0.125rem',
-        '7': '1.75rem',
+        '7': '1.75rem'
       },
-      borderWidth: {},
-    },
+      borderWidth: {}
+    }
     // container: {},
     // fontFamily: {
     // sans: [
@@ -118,5 +118,5 @@ module.exports = {
   },
   plugins: [
     // Some useful comment
-  ],
+  ]
 };

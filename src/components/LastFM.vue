@@ -190,7 +190,7 @@ export default {
 }
 
 #lastfm ul li {
-  @apply mb-5 grid col-gap-4 p-0 leading-snug;
+  @apply mb-5 grid gap-x-4 p-0 leading-snug;
   grid-template-columns: 4.5rem auto;
   grid-template-rows: auto auto 1fr;
 }

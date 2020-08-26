@@ -87,7 +87,7 @@ export default {
 }
 
 .letterboxd > div {
-  @apply mb-5 grid col-gap-4 p-0;
+  @apply mb-5 grid gap-x-4 p-0;
   grid-template-columns: 4rem auto;
   grid-template-rows: auto 1fr;
 }

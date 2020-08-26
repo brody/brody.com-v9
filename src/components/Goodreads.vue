@@ -67,7 +67,7 @@ export default {
   @apply mt-5;
 }
 .gr_custom_each_container_1532863785 {
-  @apply mb-5 grid col-gap-4;
+  @apply mb-5 grid gap-x-4;
   grid-template-columns: 4rem auto;
   grid-template-rows: auto 1fr;
 }
