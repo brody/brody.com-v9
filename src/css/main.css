@@ -134,7 +134,12 @@ hr {
 }
 
 mark {
-  @apply bg-color-dim text-color-main rounded-md px-1 py-05 -mx-1 -my-05;
+  @apply bg-color-dim text-color-main px-1 py-05 -mx-1 -my-05;
+}
+
+.marker-radius,
+mark {
+  border-radius: 4rem 2rem 4.2rem 1.1rem;
 }
 
 code {
