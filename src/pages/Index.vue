@@ -3,7 +3,7 @@
     <section class="mb-16 md:mb-24 lg:mb-40">
       <Memoji class="h-16 w-auto absolute mb-3 -mt-20" />
 
-      <h2 class="mb-6">
+      <h1 class="mb-4">
         G'day, I’m
         <Peek
           text="Brody MacLean"
@@ -11,24 +11,26 @@
           imageURL="intro/intro-brody.jpg"
           imageClass="max-w-xs sm:max-w-sm"
           imageWidth="230"
-        />.
-      </h2>
-      <p>
-        I’m a multi-disciplinary product designer based in
+        />,
+        <br class="sm:hidden" />a multi-disciplinary product designer based in
         <Peek
           text="Sydney, Australia"
           class="text-color-main bg-color-dim cursor-default"
           imageURL="intro/intro-sydney.jpg"
           imageClass="max-w-xs sm:max-w-sm"
           imageWidth="230"
-        />. Currently, I’m a Lead Product Designer building software for the insurance industry at
-        <Peek
-          text="Intelligent Thought"
-          class="text-color-main bg-color-dim cursor-default"
-          imageURL="intro/intro-intelligentthought.jpg"
-          imageClass="max-w-xs sm:max-w-sm"
-        />. Previously I've made things at places like Deputy, Hudl and CloudBees.
-      </p>
+        />.
+        <span class="hidden md:inline">
+          Currently, I’m desiging software for the insurance industry at
+          <Peek
+            text="Intelligent Thought"
+            class="text-color-main bg-color-dim cursor-default"
+            imageURL="intro/intro-intelligentthought.jpg"
+            imageClass="max-w-xs sm:max-w-sm"
+          />.
+        </span>
+      </h1>
+      <latesttrack />
       <p class="mt-4">
         <g-link to="/about/">
           More about me
@@ -126,6 +128,7 @@ query {
 <script>
 import Peek from "~/components/Peek.vue";
 import Memoji from "~/components/Memoji.vue";
+import latesttrack from "~/components/latesttrack.vue";
 
 export default {
   metaInfo: {
@@ -175,6 +178,7 @@ export default {
   components: {
     Peek,
     Memoji,
+    latesttrack,
   },
   // mounted: function() {
   //   console.log(process.env.GRIDSOME_BASE_URL);
