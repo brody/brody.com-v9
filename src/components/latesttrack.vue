@@ -1,7 +1,9 @@
 <template>
   <div v-if="tracks && tracks.length">
     <div v-for="(track, index) of tracks.slice(0, 1)" :key="index">
-      <div v-if="track['@attr'] && track['@attr'].nowplaying">
+      <div
+        v-if="track.date !== undefined && relativeTime(track.date['#text'], 'DD MMM YYYY, HH:mm') > 0 || track['@attr'] && track['@attr'].nowplaying"
+      >
         <div id="lastFM-latest" class="inline-flex flex-wrap bg-color-dim rounded-md p-0">
           <ul class="m-2">
             <li :key="index">
@@ -52,6 +54,19 @@ export default {
 
   // Fetches posts when the component is created.
   created() {
+    axios
+      .get(
+        "https://ws.audioscrobbler.com/2.0/?callback=&method=user.getrecenttracks&format=json&limit=1&user=brodym&api_key=75176bb2349e51a475ea56ac979f7dc4&_=1535163214017"
+      )
+      .then((response) => {
+        // JSON responses are automatically parsed.
+        this.tracks = response.data.recenttracks.track;
+        // console.log(this.tracks);
+      })
+      .catch((e) => {
+        this.errors.push(e);
+      });
+
     this.interval = setInterval(() => {
       axios
         .get(
@@ -60,16 +75,28 @@ export default {
         .then((response) => {
           // JSON responses are automatically parsed.
           this.tracks = response.data.recenttracks.track;
-          console.log(this.tracks);
+          // console.log(this.tracks);
         })
         .catch((e) => {
           this.errors.push(e);
         });
-    }, 100);
+    }, 20000);
   },
   methods: {
     relativeDate(date) {
       return moment.utc(date).local().fromNow();
+    },
+
+    relativeTime(date) {
+      var created = moment.utc(date).local();
+      var expires = created.clone().add(10, "minutes");
+
+      var now = new Date();
+      var dur = moment.duration({ from: now, to: expires });
+
+      // console.log(dur.asMinutes());
+
+      return dur.asMinutes();
     },
   },
 };
