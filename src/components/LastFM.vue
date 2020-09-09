@@ -212,7 +212,7 @@ export default {
 
 #lastfm ul li > img,
 #lastfm ul li > svg {
-  @apply col-span-1 row-span-3 col-start-1 row-start-1 rounded;
+  @apply col-span-1 row-span-3 col-start-1 row-start-1 rounded max-w-full;
 }
 
 #lastFM-recent-tracks ul li div.track {
