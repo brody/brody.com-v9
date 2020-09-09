@@ -7,8 +7,7 @@
         <div id="lastFM-latest" class="inline-flex flex-wrap bg-color-dim rounded-md p-0">
           <ul class="m-2">
             <li :key="index">
-              <img
-                src="../assets/img/lastfm/track-placeholder.svg"
+              <placeholder
                 :alt="track.name"
                 v-if="track.image[3]['#text'] === 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'"
               />
@@ -17,15 +16,20 @@
                 :alt="track.name"
                 v-else-if="track.image[3] && track.image[3]['#text']"
               />
-              <img src="../assets/img/lastfm/track-placeholder.svg" :alt="track.name" v-else />
+              <placeholder :alt="track.name" v-else />
               <div class="track">
                 <a class="shadow-none mr-2" :href="track.url" target="_blank">{{track.name}}</a>
                 <span class="artist">{{track.artist["#text"]}}</span>
               </div>
               <div
-                class="date track--now-playing"
+                class="date track--now-playing flex flex-row align-bottom"
                 v-if="track['@attr'] && track['@attr'].nowplaying"
-              >Now Playing</div>
+              >
+                Now Playing
+                <equaliser
+                  class="ml-2 h-2 w-2 rounded-none self-center fill-current text-color-mid"
+                />
+              </div>
               <div
                 class="date timeago"
                 v-else
@@ -42,9 +46,15 @@
 <script>
 import axios from "axios";
 import moment from "moment";
+import equaliser from "../assets/img/lastfm/track-nowplaying.svg";
+import placeholder from "../assets/img/lastfm/track-placeholder.svg";
 
 export default {
   name: "latesttrack",
+  components: {
+    equaliser,
+    placeholder,
+  },
   data() {
     return {
       tracks: [],
@@ -80,7 +90,7 @@ export default {
         .catch((e) => {
           this.errors.push(e);
         });
-    }, 20000);
+    }, 30000);
   },
   methods: {
     relativeDate(date) {
@@ -103,10 +113,10 @@ export default {
 </script>
 
 <style>
-#lastFM-latest .track--now-playing:after {
+/* #lastFM-latest .track--now-playing:after {
   content: url(../assets/img/lastfm/track-nowplaying.gif);
   margin-left: 0.4rem;
-}
+} */
 
 #lastFM-latest {
   @apply inline-flex;
@@ -125,8 +135,9 @@ export default {
   grid-template-rows: auto 1fr;
 }
 
-#lastFM-latest ul li img {
-  @apply col-span-1 row-span-3 col-start-1 row-start-1;
+#lastFM-latest ul li > img,
+#lastFM-latest ul li > svg {
+  @apply col-span-1 row-span-3 col-start-1 row-start-1 rounded;
   height: 2.7rem;
 }
 
@@ -140,5 +151,75 @@ export default {
 
 #lastFM-latest ul li div.date {
   @apply col-span-1 row-span-1 col-start-2 row-start-2 self-start text-xs text-color-mid;
+}
+
+#now-playing-bar {
+  animation: now-playing-bar__ts 1300ms linear infinite normal forwards;
+}
+@keyframes now-playing-bar__ts {
+  0% {
+    transform: translate(1.5px, 16px) scale(1, 1.46961);
+  }
+  15.384615% {
+    transform: translate(1.5px, 16px) scale(1, 2.746652);
+  }
+  30.769231% {
+    transform: translate(1.5px, 16px) scale(1, 0.915976);
+  }
+  61.538462% {
+    transform: translate(1.5px, 16px) scale(1, 3.666059);
+  }
+  100% {
+    transform: translate(1.5px, 16px) scale(1, 0.690486);
+  }
+}
+#bar-2_ts {
+  animation: bar-2_ts__ts 1300ms linear infinite normal forwards;
+}
+@keyframes bar-2_ts__ts {
+  0% {
+    transform: translate(6.5px, 16px) scale(1, 1);
+  }
+  7.692308% {
+    transform: translate(6.5px, 16px) scale(1, 0.849129);
+  }
+  30.769231% {
+    transform: translate(6.5px, 16px) scale(1, 1.230878);
+  }
+  69.230769% {
+    transform: translate(6.5px, 16px) scale(1, 0.307613);
+  }
+  76.923077% {
+    transform: translate(6.5px, 16px) scale(1, 0.461842);
+  }
+  84.615385% {
+    transform: translate(6.5px, 16px) scale(1, 0.307613);
+  }
+  100% {
+    transform: translate(6.5px, 16px) scale(1, 0.769128);
+  }
+}
+#bar-3_ts {
+  animation: bar-3_ts__ts 1300ms linear infinite normal forwards;
+}
+@keyframes bar-3_ts__ts {
+  0% {
+    transform: translate(13px, 16px) scale(1, 1);
+  }
+  15.384615% {
+    transform: translate(13px, 16px) scale(1, 0.502744);
+  }
+  46.153846% {
+    transform: translate(13px, 16px) scale(1, 1.874795);
+  }
+  61.538462% {
+    transform: translate(13px, 16px) scale(1, 1.127769);
+  }
+  76.923077% {
+    transform: translate(13px, 16px) scale(1, 1.998726);
+  }
+  100% {
+    transform: translate(13px, 16px) scale(1, 1.125008);
+  }
 }
 </style>

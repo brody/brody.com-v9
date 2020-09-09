@@ -6,8 +6,12 @@
       <div id="lastFM-recent-tracks" class="mb-6 lg:mb-8 lg:h-640">
         <ul v-if="tracks && tracks.length">
           <li v-for="(track, index) of tracks.slice(0, 5)" :key="index">
-            <img
+            <!-- <img
               src="../assets/img/lastfm/track-placeholder.svg"
+              :alt="track.name"
+              v-if="track.image[3]['#text'] === 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'"
+            />-->
+            <placeholder
               :alt="track.name"
               v-if="track.image[3]['#text'] === 'https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png'"
             />
@@ -16,15 +20,20 @@
               :alt="track.name"
               v-else-if="track.image[3] && track.image[3]['#text']"
             />
-            <img src="../assets/img/lastfm/track-placeholder.svg" :alt="track.name" v-else />
+            <placeholder :alt="track.name" v-else />
+
+            <!-- <img src="../assets/img/lastfm/track-placeholder.svg" :alt="track.name" v-else /> -->
             <div class="track">
               <a class="shadow-none" :href="track.url" target="_blank">{{track.name}}</a>
             </div>
             <div class="artist">{{track.artist["#text"]}}</div>
             <div
-              class="date track--now-playing"
+              class="date track--now-playing flex flex-row align-bottom"
               v-if="track['@attr'] && track['@attr'].nowplaying"
-            >Now Playing</div>
+            >
+              Now Playing
+              <equaliser class="ml-2 h-2 w-2 rounded-none self-center fill-current text-color-mid" />
+            </div>
             <div
               class="date timeago"
               v-else
@@ -116,9 +125,15 @@
 <script>
 import axios from "axios";
 import moment from "moment";
+import equaliser from "../assets/img/lastfm/track-nowplaying.svg";
+import placeholder from "../assets/img/lastfm/track-placeholder.svg";
 
 export default {
   name: "LastFM",
+  components: {
+    equaliser,
+    placeholder,
+  },
   data() {
     return {
       tracks: [],
@@ -177,10 +192,10 @@ export default {
 </script>
 
 <style>
-#lastfm .track--now-playing:after {
+/* #lastfm .track--now-playing:after {
   content: url(../assets/img/lastfm/track-nowplaying.gif);
   margin-left: 4px;
-}
+} */
 
 #lastfm ul li {
   @apply ml-0;
@@ -195,8 +210,9 @@ export default {
   grid-template-rows: auto auto 1fr;
 }
 
-#lastfm ul li img {
-  @apply col-span-1 row-span-3 col-start-1 row-start-1;
+#lastfm ul li > img,
+#lastfm ul li > svg {
+  @apply col-span-1 row-span-3 col-start-1 row-start-1 rounded;
 }
 
 #lastFM-recent-tracks ul li div.track {
@@ -217,5 +233,75 @@ export default {
 
 #lastFM-top-artists ul li div.play-count {
   @apply col-span-1 row-span-1 col-start-2 row-start-2 self-start pt-1 text-sm text-color-mid pt-1;
+}
+
+#now-playing-bar {
+  animation: now-playing-bar__ts 1300ms linear infinite normal forwards;
+}
+@keyframes now-playing-bar__ts {
+  0% {
+    transform: translate(1.5px, 16px) scale(1, 1.46961);
+  }
+  15.384615% {
+    transform: translate(1.5px, 16px) scale(1, 2.746652);
+  }
+  30.769231% {
+    transform: translate(1.5px, 16px) scale(1, 0.915976);
+  }
+  61.538462% {
+    transform: translate(1.5px, 16px) scale(1, 3.666059);
+  }
+  100% {
+    transform: translate(1.5px, 16px) scale(1, 0.690486);
+  }
+}
+#bar-2_ts {
+  animation: bar-2_ts__ts 1300ms linear infinite normal forwards;
+}
+@keyframes bar-2_ts__ts {
+  0% {
+    transform: translate(6.5px, 16px) scale(1, 1);
+  }
+  7.692308% {
+    transform: translate(6.5px, 16px) scale(1, 0.849129);
+  }
+  30.769231% {
+    transform: translate(6.5px, 16px) scale(1, 1.230878);
+  }
+  69.230769% {
+    transform: translate(6.5px, 16px) scale(1, 0.307613);
+  }
+  76.923077% {
+    transform: translate(6.5px, 16px) scale(1, 0.461842);
+  }
+  84.615385% {
+    transform: translate(6.5px, 16px) scale(1, 0.307613);
+  }
+  100% {
+    transform: translate(6.5px, 16px) scale(1, 0.769128);
+  }
+}
+#bar-3_ts {
+  animation: bar-3_ts__ts 1300ms linear infinite normal forwards;
+}
+@keyframes bar-3_ts__ts {
+  0% {
+    transform: translate(13px, 16px) scale(1, 1);
+  }
+  15.384615% {
+    transform: translate(13px, 16px) scale(1, 0.502744);
+  }
+  46.153846% {
+    transform: translate(13px, 16px) scale(1, 1.874795);
+  }
+  61.538462% {
+    transform: translate(13px, 16px) scale(1, 1.127769);
+  }
+  76.923077% {
+    transform: translate(13px, 16px) scale(1, 1.998726);
+  }
+  100% {
+    transform: translate(13px, 16px) scale(1, 1.125008);
+  }
 }
 </style>
