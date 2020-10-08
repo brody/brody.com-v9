@@ -5,12 +5,19 @@
       <p>
         I am currently Lead Product Designer at
         <a
-          href="http://www.intelligentthought.com.au/"
+          href="https://www.practifi.com/"
           target="_blank"
           rel="noopener noreferrer"
-        >Intelligent Thought</a>, designing software for the insurance industry that makes managing claims easier for insurers, brokers and underwriters.
+          >Practifi</a
+        >, designing software that powers growing financial advice firms around
+        the world.
       </p>
-      <p>With 9+ years of experience in product design & a previous 6 years in graphic, print & digital design. A knack for problem-solving & visual design and my keen curiosity has me always looking to expand my knowledge in all things design & technology.</p>
+      <p>
+        With 9+ years of experience in product design & a previous 6 years in
+        graphic, print & digital design. A knack for problem-solving & visual
+        design and my keen curiosity has me always looking to expand my
+        knowledge in all things design & technology.
+      </p>
       <figure class="mt-6">
         <g-image alt="Brody MacLean" src="~/assets/img/about/brody.jpg" />
         <figcaption>Photo by Nicola Walker 2019</figcaption>
@@ -21,8 +28,8 @@
       <h2 class="mb-5">Vision</h2>
       <p>
         I want to work on meaningful and valuable products that do good, for
-        man, nature and the planet. I want to dedicate my skills, experience
-        and knowledge to projects and people who want to
+        man, nature and the planet. I want to dedicate my skills, experience and
+        knowledge to projects and people who want to
         <mark>make this world a better place</mark>.
       </p>
     </section>

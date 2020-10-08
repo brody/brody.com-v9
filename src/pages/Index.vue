@@ -11,8 +11,8 @@
           imageURL="intro/intro-brody.jpg"
           imageClass="max-w-xs sm:max-w-sm"
           imageWidth="230"
-        />,
-        <br class="sm:hidden" />a multi-disciplinary product designer based in
+        />, <br class="sm:hidden" />a multi-disciplinary product designer based
+        in
         <Peek
           text="Sydney, Australia"
           class="text-color-main bg-color-dim cursor-default"
@@ -21,11 +21,11 @@
           imageWidth="230"
         />.
         <span class="hidden md:inline">
-          Currently, I’m desiging software for the insurance industry at
+          Currently, I’m desiging software for the finance industry at
           <Peek
-            text="Intelligent Thought"
+            text="Practifi"
             class="text-color-main bg-color-dim cursor-default"
-            imageURL="intro/intro-intelligentthought.jpg"
+            imageURL="intro/intro-practifi.jpg"
             imageClass="max-w-xs sm:max-w-sm"
           />.
         </span>
@@ -42,9 +42,15 @@
     <section class="mb-16 md:mb-24 lg:mb-32">
       <h2 class="mb-4 text-color-mid">Journal</h2>
 
-      <div v-for="entry in $page.entries.edges" :key="entry.id" class="my-2 py-2">
+      <div
+        v-for="entry in $page.entries.edges"
+        :key="entry.id"
+        class="my-2 py-2"
+      >
         <h3 class="font-medium mb-1">
-          <g-link class="link" :to="entry.node.path">{{ entry.node.title }}</g-link>
+          <g-link class="link" :to="entry.node.path">{{
+            entry.node.title
+          }}</g-link>
         </h3>
         <div>{{ entry.node.description }}</div>
         <span class="text-color-mid text-sm mt-1">{{ entry.node.date }}</span>
@@ -54,7 +60,11 @@
           :key="tag.id"
         >
           •
-          <g-link class="entry-tags__link text-sm text-color-mid" :to="tag.path">{{ tag.title }}</g-link>
+          <g-link
+            class="entry-tags__link text-sm text-color-mid"
+            :to="tag.path"
+            >{{ tag.title }}</g-link
+          >
         </span>
       </div>
 
