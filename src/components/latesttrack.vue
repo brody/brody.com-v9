@@ -99,7 +99,7 @@ export default {
 
     relativeTime(date) {
       var created = moment.utc(date).local();
-      var expires = created.clone().add(10, "minutes");
+      var expires = created.clone().add(60, "minutes");
 
       var now = new Date();
       var dur = moment.duration({ from: now, to: expires });
