@@ -3,20 +3,19 @@
     <section class="mb-20">
       <h1 class="mb-6">About</h1>
       <p>
-        I am currently Lead Product Designer at
+        I am currently Principal Product Designer at
         <a
-          href="https://www.practifi.com/"
+          href="https://www.mitti.com.au/"
           target="_blank"
           rel="noopener noreferrer"
-          >Practifi</a
-        >, designing software that powers growing financial advice firms around
-        the world.
+          >Mitti</a
+        >, designing software that enables small business to mitigate risk.
       </p>
       <p>
-        With 9+ years of experience in product design & a previous 6 years in
-        graphic, print & digital design. A knack for problem-solving & visual
-        design and my keen curiosity has me always looking to expand my
-        knowledge in all things design & technology.
+        With over 10 years of experience in product design & a previous 6 years
+        in graphic, print, marketing & digital design. A knack for
+        problem-solving & visual design and my keen curiosity has me always
+        looking to expand my knowledge in all things design & technology.
       </p>
       <figure class="mt-6">
         <g-image alt="Brody MacLean" src="~/assets/img/about/brody.jpg" />
@@ -40,10 +39,10 @@
         <a
           href="https://twitter.com/BrodyMaclean"
           target="_blank"
-          class="flex items-center py-2 w-1/2 sm:w-1/3 md:w-1/4 shadow-none relative"
+          class="relative flex items-center w-1/2 py-2 shadow-none  sm:w-1/3 md:w-1/4"
         >
           <svg
-            class="h-4 w-4 mr-2 inline-block fill-current opacity-75"
+            class="inline-block w-4 h-4 mr-2 opacity-75 fill-current"
             viewBox="0 0 32 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -58,10 +57,10 @@
         <a
           href="https://instagram.com/Brody"
           target="_blank"
-          class="flex items-center py-2 w-1/2 sm:w-1/3 md:w-1/4 shadow-none relative"
+          class="relative flex items-center w-1/2 py-2 shadow-none  sm:w-1/3 md:w-1/4"
         >
           <svg
-            class="h-4 w-4 mr-2 inline-block fill-current opacity-75"
+            class="inline-block w-4 h-4 mr-2 opacity-75 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
@@ -75,10 +74,10 @@
         <a
           href="https://www.linkedin.com/in/BrodyMaclean/"
           target="_blank"
-          class="flex items-center py-2 w-1/2 sm:w-1/3 md:w-1/4 shadow-none relative"
+          class="relative flex items-center w-1/2 py-2 shadow-none  sm:w-1/3 md:w-1/4"
         >
           <svg
-            class="h-4 w-4 mr-2 inline-block fill-current opacity-75"
+            class="inline-block w-4 h-4 mr-2 opacity-75 fill-current"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -91,10 +90,10 @@
         <a
           href="https://codepen.io/Brody"
           target="_blank"
-          class="flex items-center py-2 w-1/2 sm:w-1/3 md:w-1/4 shadow-none relative"
+          class="relative flex items-center w-1/2 py-2 shadow-none  sm:w-1/3 md:w-1/4"
         >
           <svg
-            class="h-4 w-4 mr-2 inline-block fill-current opacity-75"
+            class="inline-block w-4 h-4 mr-2 opacity-75 fill-current"
             viewBox="0 0 32 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -109,10 +108,10 @@
         <a
           href="https://github.com/Brody"
           target="_blank"
-          class="flex items-center py-2 w-1/2 sm:w-1/3 md:w-1/4 shadow-none relative"
+          class="relative flex items-center w-1/2 py-2 shadow-none  sm:w-1/3 md:w-1/4"
         >
           <svg
-            class="h-4 w-4 mr-2 inline-block fill-current opacity-75"
+            class="inline-block w-4 h-4 mr-2 opacity-75 fill-current"
             viewBox="0 0 32 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -129,10 +128,10 @@
         <a
           href="mailto:hello@brody.com?Subject=G'day Brody!"
           target="_blank"
-          class="flex items-center py-2 w-1/2 sm:w-1/3 md:w-1/4 shadow-none relative"
+          class="relative flex items-center w-1/2 py-2 shadow-none  sm:w-1/3 md:w-1/4"
         >
           <svg
-            class="h-4 w-4 mr-2 inline-block fill-current opacity-75"
+            class="inline-block w-4 h-4 mr-2 opacity-75 fill-current"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >

@@ -1,13 +1,13 @@
 <template>
   <Layout>
     <section class="mb-16 md:mb-24 lg:mb-40">
-      <Memoji class="h-16 w-auto absolute mb-3 -mt-20" />
+      <Memoji class="absolute w-auto h-16 mb-3 -mt-20" />
 
       <h1 class="mb-4">
         G'day, I’m
         <Peek
           text="Brody MacLean"
-          class="text-color-main bg-color-dim cursor-default"
+          class="cursor-default text-color-main bg-color-dim"
           imageURL="intro/intro-brody.jpg"
           imageClass="max-w-xs sm:max-w-sm"
           imageWidth="230"
@@ -15,17 +15,17 @@
         in
         <Peek
           text="Sydney, Australia"
-          class="text-color-main bg-color-dim cursor-default"
+          class="cursor-default text-color-main bg-color-dim"
           imageURL="intro/intro-sydney.jpg"
           imageClass="max-w-xs sm:max-w-sm"
           imageWidth="230"
         />.
         <span class="hidden md:inline">
-          Currently, I’m desiging software for the finance industry at
+          Currently, I'm desiging software for the insurance industry at
           <Peek
-            text="Practifi"
-            class="text-color-main bg-color-dim cursor-default"
-            imageURL="intro/intro-practifi.jpg"
+            text="Mitti"
+            class="cursor-default text-color-main bg-color-dim"
+            imageURL="intro/intro-mitti.jpg"
             imageClass="max-w-xs sm:max-w-sm"
           />.
         </span>
@@ -45,23 +45,23 @@
       <div
         v-for="entry in $page.entries.edges"
         :key="entry.id"
-        class="my-2 py-2"
+        class="py-2 my-2"
       >
-        <h3 class="font-medium mb-1">
+        <h3 class="mb-1 font-medium">
           <g-link class="link" :to="entry.node.path">{{
             entry.node.title
           }}</g-link>
         </h3>
         <div>{{ entry.node.description }}</div>
-        <span class="text-color-mid text-sm mt-1">{{ entry.node.date }}</span>
+        <span class="mt-1 text-sm text-color-mid">{{ entry.node.date }}</span>
         <span
-          class="entry-tags text-sm text-color-mild"
+          class="text-sm entry-tags text-color-mild"
           v-for="tag in entry.node.tags"
           :key="tag.id"
         >
           •
           <g-link
-            class="entry-tags__link text-sm text-color-mid"
+            class="text-sm entry-tags__link text-color-mid"
             :to="tag.path"
             >{{ tag.title }}</g-link
           >
@@ -79,8 +79,8 @@
     <section class="mb-16 md:mb-24 lg:mb-32" id="featured-work">
       <h2 class="mb-4 text-color-mid">Featured work</h2>
 
-      <div v-for="work in $page.work.edges" :key="work.id" class="my-2 py-2">
-        <h3 class="font-medium mb-1">
+      <div v-for="work in $page.work.edges" :key="work.id" class="py-2 my-2">
+        <h3 class="mb-1 font-medium">
           <g-link class="link" :to="work.node.path">
             <Peek
               :text="work.node.title"
@@ -90,7 +90,7 @@
           </g-link>
         </h3>
         <div>{{ work.node.description }}</div>
-        <span class="text-color-mid text-sm mt-1">
+        <span class="mt-1 text-sm text-color-mid">
           {{ work.node.year }}
           <span class="text-color-mild">•</span>
           {{ work.node.job_title }}
